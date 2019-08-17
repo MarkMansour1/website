@@ -24,7 +24,7 @@ body {
 }
 
 .navbar-brand img {
-  height: 2rem;
+  height: 3rem;
 }
 
 .navbar-nav li {
@@ -273,6 +273,10 @@ hr.socket {
 /* Md screen styling */
 
 @media (max-width: 767px) {
+
+  .navbar-brand img {
+    height: 2rem;
+  }
 
   .caption h1 {
     font-size: 2.3rem;
