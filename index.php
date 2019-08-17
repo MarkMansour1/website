@@ -87,7 +87,7 @@ include_once("php/dbconnect.php");
 		}
 		else {
 			echo '
-			<h1>Welcome</h1>
+			<h1>Welcome Samy</h1>
 			<h3>Web Design & Development</h3>
 			<a href="#about" class="btn btn-outline-light btn-lg">Get Started</a>
 			';
