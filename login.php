@@ -82,7 +82,7 @@ include_once("php/dbconnect.php");
       <input type="password" name="password" placeholder="Password"><br>
       <button type="submit" class="btn btn-outline-light btn-lg">LOG IN</button>
       <!-- <p>Don't have an account? <a href="signup.php">Sign Up</a></p> -->
-			<p><a href="index.php">Go back to home</a></p>
+			<p><a href="index.php">Go back home</a></p>
     </form>
 
 	</div>
