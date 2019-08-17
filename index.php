@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mark Mansour</title>
+	<link rel=icon href=img/favicon.png>
 	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/fixed.css">
-	<link rel=icon href=favicon.png>
 </head>
 
 <body data-spy="scroll" data-target="#navbarResponsive">

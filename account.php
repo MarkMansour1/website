@@ -10,6 +10,7 @@
   <meta name="author" content="">
 
   <title>My Account</title>
+  <link rel=icon href=img/favicon.png>
 
   <!-- Custom fonts for this template-->
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />

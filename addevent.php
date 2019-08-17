@@ -10,6 +10,7 @@
   <meta name="author" content="">
 
   <title>Add Event</title>
+  <link rel=icon href=img/favicon.png>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
