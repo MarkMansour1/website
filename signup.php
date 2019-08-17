@@ -11,6 +11,8 @@
 
 <body>
 <?php
+header("location: index.php");
+
 session_start();
 include_once("php/dbconnect.php");
 ?>
