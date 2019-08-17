@@ -49,7 +49,7 @@ include_once("php/dbconnect.php");
 				if(isset($_SESSION['UserID'])){
 					echo '
 					<li class="nav-item">
-						<a href="schedule.php" class="nav-link">My Account</a>
+						<a href="account.php" class="nav-link">My Account</a>
 					</li>
 					<li class="nav-item">
 						<a href="php/logout.php" class="nav-link">Log Out</a>

@@ -81,7 +81,7 @@
 
             </div>
             <br>
-            <button type="submit" class="btn btn-primary btn-user btn-block">Add Event</button>
+            <button type="submit" class="btn btn-primary btn-user btn-block">Save Changes</button>
           </form>
         </div>
 

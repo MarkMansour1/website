@@ -20,7 +20,7 @@ else {
 
   $sql = "UPDATE users SET times = '$times' WHERE userid = '$userid';";
   if(mysqli_query($conn, $sql)){
-    header("location: ../account.php?edit=success");
+    header("location: ../schedule.php");
     exit();
   }
   else {

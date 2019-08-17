@@ -29,7 +29,7 @@ else {
 
   //Updates the details in the database
   if(mysqli_query($conn, $sql)){
-    header("location: ../index.php?week=$week");
+    header("location: ../schedule.php?week=$week");
     exit();
   }
   else {

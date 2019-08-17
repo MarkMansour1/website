@@ -10,7 +10,7 @@ $sql = "DELETE FROM  events WHERE eventid = '$id'";
 
 //Updates the details in the database
 if(mysqli_query($conn, $sql)){
-  header("location: ../index.php");
+  header("location: ../schedule.php");
   exit();
 }
 else {
