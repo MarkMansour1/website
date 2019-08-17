@@ -35,7 +35,7 @@
 
   <!-- Nav Item - Settings -->
   <li class="nav-item">
-    <a class="nav-link" href="index.php">
+    <a class="nav-link" href="account.php">
       <i class="fas fa-fw fa-cog"></i>
       <span>Settings</span></a>
   </li>
@@ -47,6 +47,13 @@
   <div class="sidebar-heading">
     Apps
   </div>
+
+  <!-- Nav Item - Charts -->
+  <li class="nav-item">
+    <a class="nav-link" href="account.php">
+      <i class="fas fa-fw fa-chart-area"></i>
+      <span>Charts</span></a>
+  </li>
 
   <!-- Nav Item - Dashboard -->
   <li class="nav-item">
@@ -73,11 +80,11 @@
       <div class="bg-white py-2 collapse-inner rounded">
         <div class="collapse-divider"></div>
         <h6 class="collapse-header">Documents:</h6>
-        <a class="collapse-item" href="account.php">Login</a>
-        <a class="collapse-item" href="account.php">Register</a>
-        <a class="collapse-item" href="account.php">Forgot Password</a>
-        <a class="collapse-item" href="account.php">404 Page</a>
-        <a class="collapse-item" href="account.php">Blank Page</a>
+        <a class="collapse-item" href="account.php">Proposal</a>
+        <a class="collapse-item" href="account.php">Contract</a>
+        <a class="collapse-item" href="account.php">Questionnaire</a>
+        <a class="collapse-item" href="account.php">Homework Sheet</a>
+        <a class="collapse-item" href="account.php"></a>
       </div>
     </div>
   </li>
