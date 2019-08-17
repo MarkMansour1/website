@@ -2,9 +2,9 @@
 
 //Database details
 $server = "localhost";
-$user = "root";
-$pass = "";
-$db = "timetable";
+$user = "u671780733_mark";
+$pass = "kbhL0ZPs";
+$db = "u671780733_mmdb";
 
 //Connection statement
 $conn = mysqli_connect($server, $user, $pass, $db);
