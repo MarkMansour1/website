@@ -9,8 +9,8 @@ body {
 .offset:before {
   display: block;
   content: "";
-  height: 4rem;
-  margin-top: -4rem;
+  height: 8rem;
+  margin-top: -8rem;
 }
 
 /* Navbar */
@@ -136,7 +136,7 @@ body {
   bottom: 2rem;
 }
 
-/* Course */
+/* About */
 
 .narrow {
   width: 75%;
@@ -165,7 +165,7 @@ body {
   border-color: #38a0ba;
 }
 
-/* Features */
+/* Services */
 
 .jumbotron {
   margin-bottom: 0;
@@ -315,6 +315,11 @@ hr.socket {
   footer img {
     height: 2rem;
     margin: 1.5rem 0;
+  }
+
+  .offset:before {
+    height: 2rem;
+    margin-top: -2rem;
   }
 
 }

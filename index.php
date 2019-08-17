@@ -16,6 +16,7 @@ session_start();
 include_once("php/dbconnect.php");
 ?>
 
+<!-- begin home -->
 <div id="home">
 
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -32,10 +33,10 @@ include_once("php/dbconnect.php");
 					<a href="#home" class="nav-link">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="#course" class="nav-link">Course</a>
+					<a href="#about" class="nav-link">About</a>
 				</li>
 				<li class="nav-item">
-					<a href="#features" class="nav-link">Features</a>
+					<a href="#services" class="nav-link">Services</a>
 				</li>
 				<li class="nav-item">
 					<a href="#resources" class="nav-link">Resources</a>
@@ -81,14 +82,14 @@ include_once("php/dbconnect.php");
 			echo '
 			<h1>Welcome back, '.$_SESSION['FirstName'].'</h1>
 			<h3>Good to see you again</h3>
-			<a href="#course" class="btn btn-outline-light btn-lg">Get Started</a>
+			<a href="#about" class="btn btn-outline-light btn-lg">Get Started</a>
 			';
 		}
 		else {
 			echo '
 			<h1>Welcome</h1>
-			<h3>Custom web development</h3>
-			<a href="#course" class="btn btn-outline-light btn-lg">Get Started</a>
+			<h3>Web Design & Development</h3>
+			<a href="#about" class="btn btn-outline-light btn-lg">Get Started</a>
 			';
 		}
 		?>
@@ -97,21 +98,23 @@ include_once("php/dbconnect.php");
 </div>
 <!-- end home -->
 
-<div id="course" class="offset">
+<!-- begin about -->
+<div id="about" class="offset">
 	<div class="col-12 narrow text-center">
-		<h1>Nuno theme advanced bootstrap course</h1>
+		<h1>Lorem ipsum dolor sit amet.</h1>
 		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		<a href="#" class="btn btn-secondary btn-md">Button Text</a>
+		<a href="#contact" class="btn btn-secondary btn-md">Get in touch</a>
 	</div>
 </div>
-<!-- end course -->
+<!-- end about -->
 
-<div id="features" class="offset">
+<!-- begin services -->
+<div id="services" class="offset">
 	<div class="jumbotron">
 		<div class="narrow text-center">
 
 			<div class="col-12">
-				<h3 class="heading">Features</h3>
+				<h3 class="heading">Services</h3>
 				<div class="heading-underline"></div>
 			</div>
 
@@ -146,7 +149,7 @@ include_once("php/dbconnect.php");
 		</div>
 	</div>
 </div>
-<!-- end features -->
+<!-- end services -->
 
 <div id="resources" class="offset">
 	<div class="fixed-background">
