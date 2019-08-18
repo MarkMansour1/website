@@ -1,19 +1,18 @@
 /*
 
+white:
+#ffffff
+
 blue:
-#659DBD
+#659dbd
 
-green/brown:
-#8D8741
+greys (light/dark):
+#e9ecef
+#505962
 
-light orange:
-#DAAD86
-
-dark orange:
-#BC986A
-
-light cream:
-#FBEEC1
+footer blue/highlight:
+#424f57
+#6d7f8a
 
 */
 
@@ -43,8 +42,8 @@ body {
   font-weight: 700;
   font-size: .9rem;
   letter-spacing: .1rem;
-  /* background-color: rgba(255, 255, 255, .8)!important; */
   padding: .5rem 5%;
+  box-shadow: 0 0 .5rem #505962;
 }
 
 .navbar-brand img {
@@ -56,12 +55,12 @@ body {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #659DBD;
+  color: #505962;
   padding-top: .8rem;
 }
 
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link:hover {
-  color: #505962;
+  color: #659DBD;
 }
 
 /* Home */
@@ -190,7 +189,7 @@ body {
 /* About */
 
 .about {
-  background-color: #dee2e6;
+  background-color: #e9ecef;
 }
 
 .about img {

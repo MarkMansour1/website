@@ -39,9 +39,6 @@ include_once("php/dbconnect.php");
 					<a href="#services" class="nav-link">Services</a>
 				</li>
 				<li class="nav-item">
-					<a href="#resources" class="nav-link">Resources</a>
-				</li>
-				<li class="nav-item">
 					<a href="#clients" class="nav-link">Clients</a>
 				</li>
 				<li class="nav-item">
@@ -82,7 +79,7 @@ include_once("php/dbconnect.php");
 			echo '
 			<h1>Welcome back, '.$_SESSION['FirstName'].'</h1>
 			<h3>Good to see you again</h3>
-			<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
+			<a href="account.php" class="btn btn-outline-light btn-lg">My Account</a>
 			';
 		}
 		else {
@@ -143,7 +140,7 @@ include_once("php/dbconnect.php");
 
 <!-- begin services -->
 <div id="services" class="offset">
-	<div class="jumbotron">
+	<div class="jumbotron bg-white">
 		<div class="narrow text-center">
 
 			<div class="col-12">
@@ -220,52 +217,7 @@ include_once("php/dbconnect.php");
 </div>
 <!-- end services -->
 
-<div id="resources" class="offset">
-	<div class="fixed-background">
-
-		<div class="row dark text-center">
-
-			<div class="col-12">
-				<h3 class="heading">Built with care</h3>
-				<div class="heading-underline"></div>
-			</div>
-
-			<div class="col-md-4">
-				<h3>HTML 5</h3>
-				<div class="feature">
-					<i class="fas fa-code fa-3x"></i>
-				</div>
-				<p class="lead">Built with the latest, HTML 5</p>
-			</div>
-
-			<div class="col-md-4">
-				<h3>BOOTSTRAP 4</h3>
-				<div class="feature">
-					<i class="fas fa-bold fa-3x"></i>
-				</div>
-				<p class="lead">Built with the latest, BOOTSTRAP 4</p>
-			</div>
-
-			<div class="col-md-4">
-				<h3>CSS 3</h3>
-				<div class="feature">
-					<i class="fab fa-css3 fa-3x"></i>
-				</div>
-				<p class="lead">Built with the latest, CSS 3</p>
-			</div>
-
-		</div>
-
-		<div class="fixed-wrap">
-			<div class="fixed"></div>
-		</div>
-
-	</div>
-</div>
-<!-- end resources -->
-
 <!-- begin clients -->
-
 <div id="clients" class="offset">
 	<div class="jumbotron">
 
