@@ -1,3 +1,5 @@
+/* light blue: #48d0e8 */
+
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
 
 body {
@@ -43,7 +45,7 @@ body {
 /* Home */
 
 .home-inner {
-  background-image: url(../img/computers.png);
+  background-image: url(../img/home.png);
 }
 
 .caption {
@@ -168,6 +170,7 @@ body {
 /* Services */
 
 .jumbotron {
+  background-color: #ddd;
   margin-bottom: 0;
   padding: 2rem 0 3.5rem;
   border-radius: 0;
@@ -204,7 +207,7 @@ h3.heading {
 /* Resources */
 
 .fixed {
-  background-image: url(../img/apple.png);
+  background-image: url(../img/portfolio.svg);
   z-index: -1;
 }
 
