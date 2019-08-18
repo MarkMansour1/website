@@ -30,7 +30,7 @@ include_once("php/dbconnect.php");
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a href="#home" class="nav-link">Home Page</a>
+					<a href="#home" class="nav-link">Home</a>
 				</li>
 				<li class="nav-item">
 					<a href="#about" class="nav-link">About</a>
