@@ -19,9 +19,9 @@ include_once("php/dbconnect.php");
 <!-- begin home -->
 <div id="home">
 
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
 
-		<a href="index.php" class="navbar-brand"><img src="img/logo.png"></a>
+		<a href="#home" class="navbar-brand"><img src="img/logo.png"></a>
 
 		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
@@ -76,20 +76,20 @@ include_once("php/dbconnect.php");
 		</div>
 	</div>
 
-	<div class="caption text-center">
+	<div class="caption">
 		<?php
 		if(isset($_SESSION['UserID'])){
 			echo '
 			<h1>Welcome back, '.$_SESSION['FirstName'].'</h1>
 			<h3>Good to see you again</h3>
-			<a href="#about" class="btn btn-outline-light btn-lg">Get Started</a>
+			<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
 			';
 		}
 		else {
 			echo '
-			<h1>Welcome</h1>
-			<h3>Web Design & Development</h3>
-			<a href="#about" class="btn btn-outline-light btn-lg">Get Started</a>
+			<h1>Mark Mansour</h1>
+			<h3>Freelance Web Designer & Developer</h3>
+			<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
 			';
 		}
 		?>
@@ -98,12 +98,45 @@ include_once("php/dbconnect.php");
 </div>
 <!-- end home -->
 
-<!-- begin about -->
-<div id="about" class="offset">
+<!-- begin small -->
+<div class="offset">
 	<div class="col-12 narrow text-center">
-		<h1>Lorem ipsum dolor sit amet.</h1>
+		<h1>Lorem ipsum dolor sit amet</h1>
 		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		<a href="#contact" class="btn btn-secondary btn-md">Get in touch</a>
+	</div>
+</div>
+<!-- end small -->
+
+<!-- begin about -->
+<div id="about" class="offset">
+	<div class="about jumbotron">
+		<div class="narrow">
+
+			<div class="col-12 text-center">
+				<h3 class="heading">About Me</h3>
+				<div class="heading-underline"></div>
+			</div>
+
+			<div class="row aboutinfo">
+
+				<div class="col-md-12 col-lg-6">
+					<img src="img/skills.png">
+				</div>
+
+				<div class="col-md-12 col-lg-6">
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+				</div>
+
+			</div>
+
+		</div>
 	</div>
 </div>
 <!-- end about -->
@@ -120,28 +153,64 @@ include_once("php/dbconnect.php");
 
 			<div class="row text-center">
 
-				<div class="col-md-4">
+				<div class="col-md-6 col-lg-4">
+
 					<div class="feature">
 						<i class="fas fa-play-circle fa-4x" data-fa-transform="shrink-3 up-5"></i>
 						<h3>Custom Animation</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
+
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-6 col-lg-4">
+
 					<div class="feature">
 						<i class="fas fa-sliders-h fa-4x" data-fa-transform="shrink-4.5 up-4.5"></i>
 						<h3>Content Slider</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
+
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-6 col-lg-4">
+
 					<div class="feature">
 						<i class="fab fa-wpforms fa-4x" data-fa-transform="shrink-4 up-5"></i>
 						<h3>Contact Form</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
+
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+
+					<div class="feature">
+						<i class="fas fa-play-circle fa-4x" data-fa-transform="shrink-3 up-5"></i>
+						<h3>Custom Animation</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+
+					<div class="feature">
+						<i class="fas fa-sliders-h fa-4x" data-fa-transform="shrink-4.5 up-4.5"></i>
+						<h3>Content Slider</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+
+					<div class="feature">
+						<i class="fab fa-wpforms fa-4x" data-fa-transform="shrink-4 up-5"></i>
+						<h3>Contact Form</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+
 				</div>
 
 			</div>
@@ -195,6 +264,8 @@ include_once("php/dbconnect.php");
 </div>
 <!-- end resources -->
 
+<!-- begin clients -->
+
 <div id="clients" class="offset">
 	<div class="jumbotron">
 
@@ -241,20 +312,64 @@ include_once("php/dbconnect.php");
 
 	</div>
 
-	<div class="col-12 narrow text-center">
-		<p class="lead">Want to learn more?</p>
-		<a href="#" class="btn btn-secondary btn-md">Button Text</a>
-	</div>
-
 </div>
+
 <!-- end clients -->
 
+<!-- begin contact -->
 <div id="contact" class="offset">
+
+	<div class="contactform">
+
+		<div class="col-12 text-center">
+			<h3 class="heading">Get In Touch</h3>
+			<div class="heading-underline"></div>
+		</div>
+
+		<form action="index.php" method="post">
+
+			<div class="row">
+
+				<div class="col-md-6">
+					<div class="formgroup">
+						<label>Your Name *</label>
+						<input type="text" class="form-control" name="name">
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="formgroup">
+						<label>Email *</label>
+						<input type="text" class="form-control" name="name">
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="formgroup">
+						<label>Message/Details *</label>
+						<textarea class="form-control" name="text" rows="8" cols="80"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center">
+				<input class="btn btn-outline-light btn-lg" type="submit" value="Send">
+			</div>
+
+		</form>
+	</div>
+
 	<footer>
 		<?php include("footer.php");?>
 	</footer>
 </div>
 <!-- end contact -->
+
+<!-- Back to top button -->
+<a href="#home" class="top"><i class="fas fa-2x fa-chevron-circle-up"></i></i></a>
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>

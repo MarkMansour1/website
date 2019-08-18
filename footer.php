@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
 
   <div class="col-md-5 footertext">
-    <img src="img/logo.png">
+    <a href="#home"><img src="img/logo_light.png"></a>
     <p>Freelance Web Designer & Developer</p>
   </div>
 
