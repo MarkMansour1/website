@@ -85,7 +85,7 @@ include_once("php/dbconnect.php");
 		else {
 			echo '
 			<h1>Mark Mansour</h1>
-			<h3>Freelance Web Designer & Developer</h3>
+			<h3>Freelance Web Developer</h3>
 			<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
 			';
 		}
@@ -107,7 +107,7 @@ include_once("php/dbconnect.php");
 
 <!-- begin about -->
 <div id="about" class="offset">
-	<div class="about jumbotron">
+	<div class="jumbotron about">
 		<div class="narrow">
 
 			<div class="col-12 text-center">
@@ -278,7 +278,7 @@ include_once("php/dbconnect.php");
 			<div class="heading-underline"></div>
 		</div>
 
-		<form action="index.php" method="post">
+		<form action="php/sendmail.php" method="post">
 
 			<div class="row">
 
@@ -292,7 +292,7 @@ include_once("php/dbconnect.php");
 				<div class="col-md-6">
 					<div class="formgroup">
 						<label>Email *</label>
-						<input type="text" class="form-control" name="name">
+						<input type="text" class="form-control" name="email">
 					</div>
 				</div>
 

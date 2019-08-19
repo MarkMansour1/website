@@ -2,7 +2,7 @@
 
   <div class="col-md-5 footertext">
     <a href="#home"><img src="img/logo_light.png"></a>
-    <p>Freelance Web Designer & Developer</p>
+    <p>Freelance Web Developer</p>
   </div>
 
   <div class="col-md-4 text-right footertext">
