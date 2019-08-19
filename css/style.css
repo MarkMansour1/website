@@ -17,6 +17,7 @@ footer blue/highlight:
 */
 
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+@import url('')
 
 html {
   scroll-behavior: smooth;
@@ -30,7 +31,11 @@ body {
 
 .offset:before {
   display: block;
-  content: "";
+
+  font-weight: 900;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f107';
+
   height: 4rem;
   margin-top: -4rem;
 }
@@ -298,22 +303,21 @@ blockquote .svg-inline--fa {
 .contactform form {
   width: 60%;
   margin: 2.5rem auto;
+  color: white;
 }
 
-.formgroup {
-  background-color: white;
+/* .formgroup {
   padding: .5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: white;
   border-radius: .5rem;
-}
-
-.form-control {
-  border: 0;
-}
+} */
 
 .contactform .btn {
   margin-top: 2rem;
   border-radius: .5rem;
-  width: 10rem;
+  width: 12rem;
+  text-transform: uppercase;
 }
 
 footer {
@@ -353,11 +357,11 @@ hr.socket {
   bottom: 1rem;
   right: 1rem;
   z-index: 99;
-  color: #aaa!important;
+  color: #404040!important;
 }
 
 .top:hover svg.svg-inline--fa {
-  color: #777!important;
+  color: #555!important;
 }
 
 /* Md screen styling */

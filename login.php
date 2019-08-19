@@ -42,7 +42,7 @@ include_once("php/dbconnect.php");
 				?>
 			</ul>
 		</div>
-		
+
 	</nav>
 
 	<div class="landing">
@@ -96,11 +96,10 @@ include_once("php/dbconnect.php");
 </div>
 <!-- end home -->
 
-<div id="contact" class="offset">
-	<footer>
-		<?php include("footer.php");?>
-	</footer>
-</div>
+<!-- Begin footer -->
+<footer>
+	<?php include("footer.php");?>
+</footer>
 <!-- end contact -->
 
 <script src="js/jquery-3.3.1.min.js"></script>

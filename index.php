@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Mark Mansour</title>
+	<title>Home</title>
 	<link rel=icon href=img/favicon.png>
 	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -314,11 +314,14 @@ include_once("php/dbconnect.php");
 		</form>
 	</div>
 
-	<footer>
-		<?php include("footer.php");?>
-	</footer>
 </div>
 <!-- end contact -->
+
+<!-- Begin footer -->
+<footer>
+	<?php include("footer.php");?>
+</footer>
+<!-- end footer -->
 
 <!-- Back to top button -->
 <a href="#home" class="top"><i class="fas fa-2x fa-chevron-circle-up"></i></i></a>
