@@ -18,7 +18,8 @@ include_once("php/dbconnect.php");
 
 <div id="home">
 
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+
 		<a href="index.php" class="navbar-brand"><img src="img/logo.png"></a>
 		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
@@ -41,6 +42,7 @@ include_once("php/dbconnect.php");
 				?>
 			</ul>
 		</div>
+
 	</nav>
 
 	<div class="landing">
@@ -94,11 +96,10 @@ include_once("php/dbconnect.php");
 </div>
 <!-- end home -->
 
-<div id="contact" class="offset">
-	<footer>
-		<?php include("footer.php");?>
-	</footer>
-</div>
+<!-- Begin footer -->
+<footer>
+	<?php include("footer.php");?>
+</footer>
 <!-- end contact -->
 
 <script src="js/jquery-3.3.1.min.js"></script>

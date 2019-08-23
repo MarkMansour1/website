@@ -1,8 +1,8 @@
 <div class="row justify-content-center">
 
   <div class="col-md-5 footertext">
-    <img src="img/logo.png">
-    <p>Freelance Web Designer & Developer</p>
+    <a href="#home"><img src="img/logo_light.png"></a>
+    <p>Web Developer</p>
   </div>
 
   <div class="col-md-4 text-right footertext">

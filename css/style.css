@@ -1,4 +1,26 @@
+/*
+
+white:
+#ffffff
+
+blue:
+#659dbd
+
+greys (light/dark):
+#e9ecef
+#505962
+
+footer blue/highlight:
+#424f57
+#6d7f8a
+
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   overflow-x: hidden;
@@ -8,9 +30,13 @@ body {
 
 .offset:before {
   display: block;
-  content: "";
-  height: 8rem;
-  margin-top: -8rem;
+
+  font-weight: 900;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f107';
+
+  height: 4rem;
+  margin-top: -4rem;
 }
 
 /* Navbar */
@@ -20,7 +46,8 @@ body {
   font-weight: 700;
   font-size: .9rem;
   letter-spacing: .1rem;
-  background-color: rgba(0, 0, 0, 0.6)!important;
+  padding: .5rem 5%;
+  box-shadow: 0 0 .5rem #505962;
 }
 
 .navbar-brand img {
@@ -31,22 +58,23 @@ body {
   padding-right: 0.7rem;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: white;
+.navbar-light .navbar-nav .nav-link {
+  color: #505962;
   padding-top: .8rem;
 }
 
-.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link:hover {
-  color: #48d0e8;
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link:hover {
+  color: #659DBD;
 }
 
 /* Home */
 
 .home-inner {
-  background-image: url(../img/computers.png);
+  background-image: url(../img/home.png);
 }
 
 .caption {
+  margin-left: 5%;
   width: 100%;
   max-width: 100%;
   position: absolute;
@@ -60,13 +88,11 @@ body {
   font-size: 3.8rem;
   font-weight: 700;
   letter-spacing: .3rem;
-  text-shadow: .1rem .1rem .8rem black;
   padding-bottom: 1rem;
 }
 
 .caption h3 {
   font-size: 2rem;
-  text-shadow: .1rem .1rem .5rem black;
   padding-bottom: 1.6rem;
 }
 
@@ -105,7 +131,6 @@ body {
   font-size: 3.8rem;
   font-weight: 700;
   letter-spacing: .3rem;
-  text-shadow: .1rem .1rem .8rem black;
   padding-bottom: 2.5rem;
 }
 
@@ -136,7 +161,7 @@ body {
   bottom: 2rem;
 }
 
-/* About */
+/* Small */
 
 .narrow {
   width: 75%;
@@ -156,8 +181,8 @@ body {
   padding: .6rem 1.2rem;
   margin: 1rem;
   color: white;
-  background-color: #48d0e8;
-  border-color: #48d0e8;
+  background-color: #659DBD;
+  border-color: #659DBD;
 }
 
 .btn-secondary:hover {
@@ -165,9 +190,26 @@ body {
   border-color: #38a0ba;
 }
 
+/* About */
+
+.about img {
+  width: 95%;
+
+}
+
+.aboutinfo {
+  margin-top: 3rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  padding: .5rem 3rem;
+}
+
 /* Services */
 
 .jumbotron {
+  background-color: #dfeaf5;
   margin-bottom: 0;
   padding: 2rem 0 3.5rem;
   border-radius: 0;
@@ -183,12 +225,16 @@ h3.heading {
 .heading-underline {
   width: 4rem;
   height: .2rem;
-  background-color: #48d0e8;
-  margin: 0 auto 2rem;
+  background-color: #659DBD;
+  margin: 0 auto;
+}
+
+.feature {
+  margin-top: 4rem;
 }
 
 .feature svg.svg-inline--fa {
-  color: #48d0e8;
+  color: #659DBD;
 }
 
 .feature h3 {
@@ -204,12 +250,12 @@ h3.heading {
 /* Resources */
 
 .fixed {
-  background-image: url(../img/apple.png);
+  background-image: url(../img/home.png);
   z-index: -1;
 }
 
 .dark {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 7rem 2rem;
 }
@@ -230,18 +276,51 @@ h3.heading {
 }
 
 blockquote .svg-inline--fa {
-  color: #48d0e8;
+  color: #659DBD;
   margin: 1rem;
 }
 
 .clients-hr {
-  border-top: .05rem solid #48d0e8;
+  border-top: .05rem solid #659DBD;
 }
 
 /* Contact */
 
+.contactform {
+  background-color: #659dbd;
+  padding: 5rem 0;
+}
+
+.contactform h3 {
+  color: white;
+}
+
+.contactform .heading-underline {
+  background-color: white;
+}
+
+.contactform form {
+  width: 60%;
+  margin: 2.5rem auto;
+  color: white;
+}
+
+/* .formgroup {
+  padding: .5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: white;
+  border-radius: .5rem;
+} */
+
+.contactform .btn {
+  margin-top: 2rem;
+  border-radius: .5rem;
+  width: 12rem;
+  text-transform: uppercase;
+}
+
 footer {
-  background-color: #40474e;
+  background-color: #424f57;
   color: white;
   padding: 3rem 0;
 }
@@ -261,13 +340,27 @@ footer svg.svg-inline--fa {
 }
 
 footer svg.svg-inline--fa:hover {
-  color: #48d0e8!important;
+  color: #659DBD!important;
 }
 
 hr.socket {
   width: 100%;
-  border-top: .2rem solid #666b71;
+  border-top: .2rem solid #6d7f8a;
   margin-top: 3rem;
+}
+
+/* Back to top button */
+
+.top svg.svg-inline--fa {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 99;
+  color: #404040!important;
+}
+
+.top:hover svg.svg-inline--fa {
+  color: #555!important;
 }
 
 /* Md screen styling */
@@ -278,8 +371,13 @@ hr.socket {
     height: 2rem;
   }
 
+  .caption {
+    margin-left: 0;
+    text-align: center;
+  }
+
   .caption h1 {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     letter-spacing: .15rem;
     padding-bottom: .5rem;
   }
@@ -298,10 +396,19 @@ hr.socket {
     font-size: 1.5rem;
   }
 
+  .about {
+    text-align: center;
+  }
+
   .clients img {
     max-width: 50%;
     display: block;
     margin: 0 auto;
+  }
+
+  .contactform form {
+    width: 90%;
+    margin: 1rem auto;
   }
 
   .footertext {

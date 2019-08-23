@@ -11,6 +11,6 @@ mysqli_query($conn, $sql);
 
 session_destroy();
 session_unset();
-//Return the user to the login page
-header("location: ../login.php");
+//Return the user to the home page
+header("location: ../index.php");
 ?>
