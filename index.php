@@ -6,8 +6,8 @@
 	<title>Home</title>
 	<link rel=icon href=img/favicon.png>
 	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/fixed.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body data-spy="scroll" data-target="#navbarResponsive">
