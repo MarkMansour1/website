@@ -326,7 +326,7 @@ include_once("php/dbconnect.php");
 <!-- Back to top button -->
 <a href="#home" class="top"><i class="fas fa-2x fa-chevron-circle-up"></i></i></a>
 
-<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery/jquery.min.js"></script>
 <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
 
