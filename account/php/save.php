@@ -8,5 +8,6 @@ $sql = "UPDATE users SET week = '$week' WHERE userid = '$id'";
 
 mysqli_query($conn, $sql);
 
-header("location: ../../index.php");
+header("location: https://www.markmansour.co.uk/index.php");
+exit();
 ?>
