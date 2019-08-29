@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION['UserID']) || $_SESSION['UserID'] != 1){
+  header("location: ../index.php");
+}
+?>
+
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
   <!-- Sidebar - Brand -->

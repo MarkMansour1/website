@@ -14,10 +14,6 @@ if(isset($_SESSION['UserID'])){
   $userid = $_SESSION['UserID'];
   $week = $_SESSION['Week'];
 }
-else {
-  header("location: login.php");
-  exit();
-}
 ?>
 
 <!-- Page Wrapper -->
