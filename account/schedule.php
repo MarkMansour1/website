@@ -8,7 +8,7 @@
 <body id="page-top">
 <?php
 session_start();
-include_once("../php/dbconnect.php");
+include_once("php/dbconnect.php");
 
 if(isset($_SESSION['UserID'])){
   $userid = $_SESSION['UserID'];

@@ -4,7 +4,7 @@ if(isset($_SESSION['UserID'])){
   $week = $_SESSION['Week'];
 }
 else {
-  header("location: index.php");
+  header("location: ../index.php");
   exit();
 }
 ?>
@@ -12,7 +12,7 @@ else {
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
   <!-- Sidebar - Brand -->
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="account.php">
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
     <div class="sidebar-brand-icon">
       <i class="fas fa-lg fa-user"></i>
     </div>
@@ -39,14 +39,14 @@ else {
 
   <!-- Nav Item - Account -->
   <li class="nav-item">
-    <a class="nav-link" href="account.php">
+    <a class="nav-link" href="index.php">
       <i class="fas fa-fw fa-user"></i>
       <span>My Account</span></a>
   </li>
 
   <!-- Nav Item - Settings -->
   <li class="nav-item">
-    <a class="nav-link" href="account.php">
+    <a class="nav-link" href="index.php">
       <i class="fas fa-fw fa-cog"></i>
       <span>Settings</span></a>
   </li>
@@ -61,14 +61,14 @@ else {
 
   <!-- Nav Item - Projects -->
   <li class="nav-item">
-    <a class="nav-link" href="account.php">
+    <a class="nav-link" href="index.php">
       <i class="fas fa-tasks"></i>
       <span>Projects</span></a>
   </li>
 
   <!-- Nav Item - Clients -->
   <li class="nav-item">
-    <a class="nav-link" href="account.php">
+    <a class="nav-link" href="index.php">
       <i class="fas fa-users"></i>
       <span>Clients</span></a>
   </li>
@@ -98,11 +98,11 @@ else {
       <div class="bg-white py-2 collapse-inner rounded">
         <div class="collapse-divider"></div>
         <h6 class="collapse-header">Documents:</h6>
-        <a class="collapse-item" href="account.php">Proposal</a>
-        <a class="collapse-item" href="account.php">Contract</a>
-        <a class="collapse-item" href="account.php">Questionnaire</a>
-        <a class="collapse-item" href="account.php">Homework Sheet</a>
-        <a class="collapse-item" href="account.php"></a>
+        <a class="collapse-item" href="index.php">Proposal</a>
+        <a class="collapse-item" href="index.php">Contract</a>
+        <a class="collapse-item" href="index.php">Questionnaire</a>
+        <a class="collapse-item" href="index.php">Homework Sheet</a>
+        <a class="collapse-item" href="index.php"></a>
       </div>
     </div>
   </li>
@@ -116,13 +116,13 @@ else {
     <div id="collapsePersonal" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Login Screens:</h6>
-        <a class="collapse-item" href="account.php">Login</a>
-        <a class="collapse-item" href="account.php">Register</a>
-        <a class="collapse-item" href="account.php">Forgot Password</a>
+        <a class="collapse-item" href="index.php">Login</a>
+        <a class="collapse-item" href="index.php">Register</a>
+        <a class="collapse-item" href="index.php">Forgot Password</a>
         <div class="collapse-divider"></div>
         <h6 class="collapse-header">Other Pages:</h6>
-        <a class="collapse-item" href="account.php">404 Page</a>
-        <a class="collapse-item" href="account.php">Blank Page</a>
+        <a class="collapse-item" href="index.php">404 Page</a>
+        <a class="collapse-item" href="index.php">Blank Page</a>
       </div>
     </div>
   </li>

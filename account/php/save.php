@@ -8,5 +8,5 @@ $sql = "UPDATE users SET week = '$week' WHERE userid = '$id'";
 
 mysqli_query($conn, $sql);
 
-header("location: ../index.php");
+header("location: ../../index.php");
 ?>

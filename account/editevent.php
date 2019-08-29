@@ -62,8 +62,6 @@ if(isset($_GET['error'])){
               echo '<input type="checkbox" name="recurring" class="form-control">';
             }
             ?>
-
-
           </div>
           <br>
           <button type="submit" class="btn btn-primary btn-user btn-block">Save Changes</button>
