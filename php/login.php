@@ -27,6 +27,7 @@ else {
       $_SESSION['FirstName'] = $row['FirstName'];
       $_SESSION['LastName'] = $row['LastName'];
       $_SESSION['Week'] = $row['Week'];
+      $_SESSION['Phone'] = $row['Phone'];
       header("location: ../index.php");
     }
     else {

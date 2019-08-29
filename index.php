@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home</title>
 	<link rel=icon href=img/favicon.png>
-	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/fixed.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -327,7 +327,7 @@ include_once("php/dbconnect.php");
 <a href="#home" class="top"><i class="fas fa-2x fa-chevron-circle-up"></i></i></a>
 
 <script src="js/jquery/jquery.min.js"></script>
-<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
 
 </body>
