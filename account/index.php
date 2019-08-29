@@ -59,7 +59,7 @@ if(isset($_SESSION['UserID'])){
 </div>
 <!-- End of Page Wrapper -->
 
-<?php include_once("../scripts.php"); ?>
+<?php include_once("scripts.php"); ?>
 
 </body>
 </html>

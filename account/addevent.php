@@ -128,7 +128,7 @@ while($row = mysqli_fetch_array($result)){
 
 </div>
 
-<?php include_once("../scripts.php"); ?>
+<?php include_once("scripts.php"); ?>
 
 </body>
 </html>
