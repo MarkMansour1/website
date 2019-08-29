@@ -1,14 +1,3 @@
-<?php
-if(isset($_SESSION['UserID'])){
-  $userid = $_SESSION['UserID'];
-  $week = $_SESSION['Week'];
-}
-else {
-  header("location: ../index.php");
-  exit();
-}
-?>
-
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
   <!-- Sidebar - Brand -->
