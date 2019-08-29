@@ -4,6 +4,23 @@ require "dbconnect.php";
 $email = $_POST['email'];
 $password = $_POST['password'];
 
+// quick bypass during dev
+if($email == "mark@test.com" && $password == "pass"){
+  $sql = "SELECT * FROM users WHERE userid = 1";
+  $result = mysqli_query($conn, $sql);
+  $mark = mysqli_fetch_array($result);
+
+  session_start();
+  $_SESSION['UserID'] = $mark['UserID'];
+  $_SESSION['Email'] = $mark['Email'];
+  $_SESSION['Password'] = $mark['Password'];
+  $_SESSION['FirstName'] = $mark['FirstName'];
+  $_SESSION['LastName'] = $mark['LastName'];
+  $_SESSION['Week'] = $mark['Week'];
+  $_SESSION['Phone'] = $mark['Phone'];
+  header("location: ../index.php");
+}
+
 //If the email or password is left empty, display an error message
 if(empty($email) || empty($password)){
   header("location: ../login.php?error=emptyfields&email=".$email);
@@ -36,6 +53,7 @@ else {
     }
   }
   else {
+    echo $password;
     header("location: ../login.php?error=usernotfound&email=".$email);
     exit();
   }

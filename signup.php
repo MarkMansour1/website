@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>Sign Up</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sign Up</title>
 	<link rel=icon href=img/favicon.png>
 	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/fixed.css">

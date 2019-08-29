@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>Mark Mansour</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home</title>
 	<link rel=icon href=img/favicon.png>
 	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/fixed.css">
@@ -76,11 +76,13 @@ include_once("php/dbconnect.php");
 	<div class="caption">
 		<?php
 		if(isset($_SESSION['UserID'])){
-			echo '
-			<h1>Welcome back, '.$_SESSION['FirstName'].'</h1>
-			<h3>Good to see you again</h3>
-			<a href="account.php" class="btn btn-outline-light btn-lg">My Account</a>
-			';
+			if($_SESSION['UserID'] == 1){
+				echo '
+				<h1>Welcome back, '.$_SESSION['FirstName'].'</h1>
+				<h3>Good to see you again</h3>
+				<a href="account.php" class="btn btn-outline-light btn-lg">My Account</a>
+				';
+			}
 		}
 		else {
 			echo '
