@@ -48,7 +48,7 @@ include_once("php/dbconnect.php");
 				if(isset($_SESSION['UserID'])){
 					echo '
 					<li class="nav-item">
-						<a href="https://account.markmansour.co.uk" class="nav-link">My Account</a>
+						<a href="http://account.markmansour.co.uk" class="nav-link">My Account</a>
 					</li>
 					<li class="nav-item">
 						<a href="php/logout.php" class="nav-link">Log Out</a>
@@ -80,7 +80,7 @@ include_once("php/dbconnect.php");
 				echo '
 				<h1>Welcome back, '.$_SESSION['FirstName'].'</h1>
 				<h3>Good to see you again</h3>
-				<a href="https://account.markmansour.co.uk" class="btn btn-outline-light btn-lg">My Account</a>
+				<a href="http://account.markmansour.co.uk" class="btn btn-outline-light btn-lg">My Account</a>
 				';
 			}
 		}
