@@ -8,7 +8,7 @@
 <body id="page-top">
 <?php
 session_start();
-include_once("../php/dbconnect.php");
+include_once("php/dbconnect.php");
 
 if(isset($_SESSION['UserID'])){
   $userid = $_SESSION['UserID'];
@@ -20,9 +20,7 @@ if(isset($_SESSION['UserID'])){
 <div id="wrapper">
 
   <!-- Sidebar -->
-  <?php
-  include_once("sidebar.php")
-  ?>
+  <?php include_once("sidebar.php"); ?>
   <!-- End of Sidebar -->
 
   <!-- Content Wrapper -->
@@ -61,7 +59,7 @@ if(isset($_SESSION['UserID'])){
 </div>
 <!-- End of Page Wrapper -->
 
-<?php include_once("scripts.php"); ?>
+<?php include_once("../scripts.php"); ?>
 
 </body>
 </html>
