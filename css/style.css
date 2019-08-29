@@ -1,23 +1,13 @@
-/*
-
-white:
-#ffffff
-
-blue:
-#659dbd
-
-greys (light/dark):
-#e9ecef
-#505962
-
-footer blue/highlight:
-#424f57
-#6d7f8a
-
-*/
-
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+:root {
+  --primary: #659dbd;
+  --text: #505962;
+  --lgrey: #e9ecef;
+  --footerblue: #424f57;
+  --footerhighlight: #6d7f8a;
+}
 
 html {
   scroll-behavior: smooth;
@@ -26,16 +16,14 @@ html {
 body {
   overflow-x: hidden;
   font-family: 'Nunito', sans-serif;
-  color: #505962;
+  color: var(--text);
 }
 
 .offset:before {
   display: block;
-
   font-weight: 900;
   font-family: 'Font Awesome 5 Free';
   content: '\f107';
-
   height: 4rem;
   margin-top: -4rem;
 }
@@ -60,12 +48,12 @@ body {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #505962;
+  color: var(--text);
   padding-top: .8rem;
 }
 
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link:hover {
-  color: #659DBD;
+  color: var(--primary);
 }
 
 /* Home */
@@ -183,8 +171,8 @@ body {
   padding: .6rem 1.2rem;
   margin: 1rem;
   color: white;
-  background-color: #659DBD;
-  border-color: #659DBD;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .btn-secondary:hover {
@@ -227,7 +215,7 @@ h3.heading {
 .heading-underline {
   width: 4rem;
   height: .2rem;
-  background-color: #659DBD;
+  background-color: var(--primary);
   margin: 0 auto;
 }
 
@@ -236,7 +224,7 @@ h3.heading {
 }
 
 .feature svg.svg-inline--fa {
-  color: #659DBD;
+  color: var(--primary);
 }
 
 .feature h3 {
@@ -278,18 +266,18 @@ h3.heading {
 }
 
 blockquote .svg-inline--fa {
-  color: #659DBD;
+  color: var(--primary);
   margin: 1rem;
 }
 
 .clients-hr {
-  border-top: .05rem solid #659DBD;
+  border-top: .05rem solid var(--primary);
 }
 
 /* Contact */
 
 .contactform {
-  background-color: #659dbd;
+  background-color: var(--primary);
   padding: 5rem 0;
 }
 
@@ -322,7 +310,7 @@ blockquote .svg-inline--fa {
 }
 
 footer {
-  background-color: #424f57;
+  background-color: var(--footerblue);
   color: white;
   padding: 3rem 0;
 }
@@ -342,12 +330,12 @@ footer svg.svg-inline--fa {
 }
 
 footer svg.svg-inline--fa:hover {
-  color: #659DBD!important;
+  color: var(--primary)!important;
 }
 
 hr.socket {
   width: 100%;
-  border-top: .2rem solid #6d7f8a;
+  border-top: .2rem solid var(--footerhighlight);
   margin-top: 3rem;
 }
 
