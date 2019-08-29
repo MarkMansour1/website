@@ -324,7 +324,7 @@ include_once("php/dbconnect.php");
 <!-- end footer -->
 
 <!-- Back to top button -->
-<a href="#home" class="top"><i class="fas fa-2x fa-chevron-circle-up"></i></i></a>
+<!-- <a href="#home" class="top"><i class="fas fa-2x fa-chevron-circle-up"></i></i></a> -->
 
 <script src="js/jquery/jquery.min.js"></script>
 <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
