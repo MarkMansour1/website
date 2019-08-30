@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Schedule</title>
-  <?php include_once("head.php") ?>
+  <?php
+  $title = "Schedule";
+  echo '<title>'.$title.'</title>';
+  include_once("head.php");
+  ?>
 </head>
 
 <body id="page-top">
@@ -21,7 +24,7 @@ if(isset($_SESSION['UserID'])){
 
   <!-- Sidebar -->
   <?php
-  include_once("../account/sidebar.php")
+  include_once("sidebar.php")
   ?>
   <!-- End of Sidebar -->
 
@@ -31,14 +34,12 @@ if(isset($_SESSION['UserID'])){
     <!-- Main Content -->
     <div id="content">
 
+      <!-- Begin topbar -->
+      <?php include_once("topbar.php"); ?>
+      <!-- end topbar -->
+
       <!-- Begin Page Content -->
       <div class="container-fluid">
-
-        <!-- Page Heading -->
-        <br>
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          <h1 class="h3 mb-0 text-gray-800">Schedule</h1>
-        </div>
 
         <?php
         if(isset($_GET['week'])){

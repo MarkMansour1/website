@@ -46,14 +46,16 @@ include_once("php/dbconnect.php");
 				</li>
 				<?php
 				if(isset($_SESSION['UserID'])){
+					if($_SESSION['UserID'] == 1){
+						echo '
+						<li class="nav-item">
+							<a href="account/index.php" class="nav-link">My Account</a>
+						</li>';
+					}
 					echo '
 					<li class="nav-item">
-						<a href="account/index.php" class="nav-link">My Account</a>
-					</li>
-					<li class="nav-item">
 						<a href="php/logout.php" class="nav-link">Log Out</a>
-					</li>
-					';
+					</li>';
 				}
 				else {
 					echo '
@@ -76,12 +78,14 @@ include_once("php/dbconnect.php");
 	<div class="caption">
 		<?php
 		if(isset($_SESSION['UserID'])){
+			echo '<h1>Welcome back, '.$_SESSION['FirstName'].'</h1>
+			<h3>Good to see you again</h3>';
+
 			if($_SESSION['UserID'] == 1){
-				echo '
-				<h1>Welcome back, '.$_SESSION['FirstName'].'</h1>
-				<h3>Good to see you again</h3>
-				<a href="account/index.php" class="btn btn-outline-light btn-lg">My Account</a>
-				';
+				echo '<a href="account/index.php" class="btn btn-outline-light btn-lg">My Account</a>';
+			}
+			else {
+				echo '<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>';
 			}
 		}
 		else {

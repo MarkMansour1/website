@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <?php
-  $title = "My Account";
+  $title = "Settings";
   echo '<title>'.$title.'</title>';
   include_once("head.php");
   ?>
@@ -39,11 +39,7 @@ if(isset($_SESSION['UserID'])){
       <!-- Begin Page Content -->
       <div class="container-fluid">
 
-        <!-- Page Heading -->
-        <br>
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          <!-- <h1 class="h3 mb-0 text-gray-800">My Account</h1> -->
-        </div>
+
 
       </div>
 

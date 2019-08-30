@@ -8,10 +8,11 @@ if(!isset($_SESSION['UserID']) || $_SESSION['UserID'] != 1){
 
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-    <div class="sidebar-brand-icon">
+    <!-- <div class="sidebar-brand-icon">
       <i class="fas fa-lg fa-user"></i>
     </div>
-    <div class="sidebar-brand-text mx-3">My Account</div>
+    <div class="sidebar-brand-text mx-3">My Account</div> -->
+    <img src="../img/logo_light.png" class="img-fluid">
   </a>
 
   <!-- Divider -->
@@ -41,7 +42,7 @@ if(!isset($_SESSION['UserID']) || $_SESSION['UserID'] != 1){
 
   <!-- Nav Item - Settings -->
   <li class="nav-item">
-    <a class="nav-link" href="index.php">
+    <a class="nav-link" href="settings.php">
       <i class="fas fa-fw fa-cog"></i>
       <span>Settings</span></a>
   </li>
@@ -56,15 +57,15 @@ if(!isset($_SESSION['UserID']) || $_SESSION['UserID'] != 1){
 
   <!-- Nav Item - Projects -->
   <li class="nav-item">
-    <a class="nav-link" href="index.php">
-      <i class="fas fa-tasks"></i>
+    <a class="nav-link" href="projects.php">
+      <i class="fas fa-fw fa-tasks"></i>
       <span>Projects</span></a>
   </li>
 
   <!-- Nav Item - Clients -->
   <li class="nav-item">
-    <a class="nav-link" href="index.php">
-      <i class="fas fa-users"></i>
+    <a class="nav-link" href="clients.php">
+      <i class="fas fa-fw fa-users"></i>
       <span>Clients</span></a>
   </li>
 
@@ -87,7 +88,7 @@ if(!isset($_SESSION['UserID']) || $_SESSION['UserID'] != 1){
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
       <i class="fas fa-fw fa-folder"></i>
-      <span>Web Development</span>
+      <span>Web Dev</span>
     </a>
     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
