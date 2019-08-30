@@ -3,7 +3,7 @@
 <head>
   <?php
   $title = "Clients";
-  echo '<title>'.$title.'</title>';
+  echo '<title>Mark Mansour - '.$title.'</title>';
   include_once("head.php");
   ?>
 </head>
@@ -38,10 +38,54 @@ if(isset($_SESSION['UserID'])){
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
-        
 
+        <!-- Client Table -->
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Client List</h6>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Company</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                  $sql = "SELECT * FROM clients";
+                  $clients = mysqli_query($conn, $sql);
+                  while($client =  mysqli_fetch_array($clients)){
+                    $id = $client['ClientID'];
+                    echo '
+                    <tr>
+                      <td>'.sprintf('%04u', $id).'</td>
+                      <td>'.$client['FirstName'].'</td>
+                      <td>'.$client['LastName'].'</td>
+                      <td>'.$client['Email'].'</td>
+                      <td>'.$client['Phone'].'</td>
+                      <td>'.$client['Company'].'</td>
+                      <td><a href="?edit='.$id.'">edit</a></td>
+                    </tr>
+                    ';
+                  }
+                  ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- End Client Table -->
 
       </div>
+      <!-- end page content -->
 
     </div>
     <!-- End of Main Content -->
@@ -63,6 +107,7 @@ if(isset($_SESSION['UserID'])){
 <!-- End of Page Wrapper -->
 
 <?php include_once("scripts.php"); ?>
+
 
 </body>
 </html>

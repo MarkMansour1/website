@@ -3,7 +3,7 @@
 <head>
   <?php
   $title = "Schedule";
-  echo '<title>'.$title.'</title>';
+  echo '<title>Mark Mansour - '.$title.'</title>';
   include_once("head.php");
   ?>
 </head>

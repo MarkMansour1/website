@@ -3,7 +3,7 @@
 <head>
   <?php
   $title = "Projects";
-  echo '<title>'.$title.'</title>';
+  echo '<title>Mark Mansour - '.$title.'</title>';
   include_once("head.php");
   ?>
 </head>
@@ -39,7 +39,52 @@ if(isset($_SESSION['UserID'])){
       <!-- Begin Page Content -->
       <div class="container-fluid">
 
-        
+        <!-- Project Table -->
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Project List</h6>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Client Name</th>
+                    <th>Company</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                  $sql = "SELECT projects.*, clients.FirstName, clients.LastName, clients.Company FROM projects INNER JOIN clients ON projects.ClientID = clients.ClientID";
+                  $projects = mysqli_query($conn, $sql);
+                  while($project =  mysqli_fetch_array($projects)){
+                    $id = $project['ProjectID'];
+                    echo '
+                    <tr>
+                      <td>'.sprintf('%04u', $id).'</td>
+                      <td>'.$project['Title'].'</td>
+                      <td>'.$project['Description'].'</td>
+                      <td>'.date('d-m-Y', strtotime($project['Date'])).'</td>
+                      <td>'.$project['FirstName'].' '.$project['LastName'].'</td>
+                      <td>'.$project['Company'].'</td>';
+                      echo ($project['Complete'] == 1) ? '<td>Complete</td>' : '<td>Incomplete</td>';
+                      echo '<td><a href="?edit='.$id.'">edit</a></td>
+                    </tr>
+                    ';
+                  }
+                  ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- End Client Table -->
 
       </div>
 
