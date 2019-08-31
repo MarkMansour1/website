@@ -325,16 +325,14 @@ include_once("php/dbconnect.php");
 
 <!-- Begin footer -->
 <footer>
-	<?php include("footer.php");?>
+	<?php include("extra/footer.php");?>
 </footer>
 <!-- end footer -->
 
 <!-- Back to top button -->
 <!-- <a href="#home" class="top"><i class="fas fa-2x fa-chevron-circle-up"></i></i></a> -->
 
-<script src="js/jquery/jquery.min.js"></script>
-<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+<?php include_once("extra/scripts.php") ?>
 
 </body>
 </html>

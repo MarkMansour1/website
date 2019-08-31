@@ -4,7 +4,7 @@
   <?php
   $title = "Schedule";
   echo '<title>Mark Mansour - '.$title.'</title>';
-  include_once("head.php");
+  include_once("extra/head.php");
   ?>
 </head>
 
@@ -24,7 +24,7 @@ if(isset($_SESSION['UserID'])){
 
   <!-- Sidebar -->
   <?php
-  include_once("sidebar.php")
+  include_once("extra/sidebar.php")
   ?>
   <!-- End of Sidebar -->
 
@@ -35,7 +35,7 @@ if(isset($_SESSION['UserID'])){
     <div id="content">
 
       <!-- Begin topbar -->
-      <?php include_once("topbar.php"); ?>
+      <?php include_once("extra/topbar.php"); ?>
       <!-- end topbar -->
 
       <!-- Begin Page Content -->
@@ -65,7 +65,7 @@ if(isset($_SESSION['UserID'])){
 </div>
 <!-- End of Page Wrapper -->
 
-<?php include_once("scripts.php"); ?>
+<?php include_once("extra/scripts.php"); ?>
 
 </body>
 </html>

@@ -4,7 +4,7 @@
   <?php
   $title = "Projects";
   echo '<title>Mark Mansour - '.$title.'</title>';
-  include_once("head.php");
+  include_once("extra/head.php");
   ?>
 </head>
 
@@ -23,7 +23,7 @@ if(isset($_SESSION['UserID'])){
 <div id="wrapper">
 
   <!-- Sidebar -->
-  <?php include_once("sidebar.php"); ?>
+  <?php include_once("extra/sidebar.php"); ?>
   <!-- End of Sidebar -->
 
   <!-- Content Wrapper -->
@@ -33,7 +33,7 @@ if(isset($_SESSION['UserID'])){
     <div id="content">
 
       <!-- Begin topbar -->
-      <?php include_once("topbar.php"); ?>
+      <?php include_once("extra/topbar.php"); ?>
       <!-- end topbar -->
 
       <!-- Begin Page Content -->
@@ -42,7 +42,7 @@ if(isset($_SESSION['UserID'])){
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 class="h4 mb-0 text-gray-800">Featured Projects</h1>
-          <a href="newproject.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-tasks fa-sm text-white-50"></i> New Project </a>
+          <a href="new.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-tasks fa-sm text-white-50"></i> New Project </a>
         </div>
 
         <!-- Begin featured projects -->
@@ -156,7 +156,7 @@ if(isset($_SESSION['UserID'])){
 </div>
 <!-- End of Page Wrapper -->
 
-<?php include_once("scripts.php"); ?>
+<?php include_once("extra/scripts.php"); ?>
 
 </body>
 </html>

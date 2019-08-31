@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
   <?php
-  $title = "Settings";
+  if(isset($_GET['add'])){
+    $title = "New Client";
+  }
+  else {
+    $title = "New Project";
+  }
   echo '<title>Mark Mansour - '.$title.'</title>';
   include_once("extra/head.php");
   ?>
@@ -39,9 +44,17 @@ if(isset($_SESSION['UserID'])){
       <!-- Begin Page Content -->
       <div class="container-fluid">
 
-
+        <?php
+        if(isset($_GET['add'])){
+          include_once("extra/newclient.php");
+        }
+        else {
+          include_once("extra/newproject.php");
+        }
+        ?>
 
       </div>
+      <!-- end page content -->
 
     </div>
     <!-- End of Main Content -->
@@ -63,6 +76,7 @@ if(isset($_SESSION['UserID'])){
 <!-- End of Page Wrapper -->
 
 <?php include_once("extra/scripts.php"); ?>
+
 
 </body>
 </html>

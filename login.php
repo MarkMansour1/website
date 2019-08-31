@@ -98,13 +98,14 @@ include_once("php/dbconnect.php");
 
 <!-- Begin footer -->
 <footer>
-	<?php include("footer.php");?>
+	<?php include("extra/footer.php");?>
 </footer>
-<!-- end contact -->
+<!-- end footer -->
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
-<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+<!-- Back to top button -->
+<!-- <a href="#home" class="top"><i class="fas fa-2x fa-chevron-circle-up"></i></i></a> -->
+
+<?php include_once("extra/scripts.php") ?>
 
 </body>
 </html>
