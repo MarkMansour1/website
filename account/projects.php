@@ -42,13 +42,13 @@ if(isset($_SESSION['UserID'])){
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 class="h4 mb-0 text-gray-800">Featured Projects</h1>
-          <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-tasks fa-sm text-white-50"></i> New Project </a>
+          <a href="newproject.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-tasks fa-sm text-white-50"></i> New Project </a>
         </div>
 
         <!-- Begin featured projects -->
         <div class="row">
           <?php
-          $sql = "SELECT projects.*, clients.FirstName, clients.LastName, clients.Company FROM projects INNER JOIN clients ON projects.ClientID = clients.ClientID ORDER BY startdate DESC LIMIT 3";
+          $sql = "SELECT projects.*, clients.FirstName, clients.LastName, clients.Company FROM projects INNER JOIN clients ON projects.ClientID = clients.ClientID WHERE complete = 0 ORDER BY deadline LIMIT 3";
           $projects = mysqli_query($conn, $sql);
           while($project =  mysqli_fetch_array($projects)){
             $id = $project['ProjectID'];
