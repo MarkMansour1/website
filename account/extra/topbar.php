@@ -126,13 +126,17 @@
           <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
           Account
         </a>
-        <a class="dropdown-item" href="settings.php">
+        <!-- <a class="dropdown-item" href="settings.php">
           <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
           Settings
-        </a>
+        </a> -->
         <a class="dropdown-item" href="projects.php">
           <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
           Projects
+        </a>
+        <a class="dropdown-item" href="clients.php">
+          <i class="fas fa-users fa-sm fa-fw mr-2 text-gray-400"></i>
+          Clients
         </a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="../php/logout.php">

@@ -2,7 +2,20 @@
 <html lang="en">
 <head>
   <?php
-  $title = "Settings";
+  if(isset($_GET['type'])){
+    if($_GET['type'] == "project"){
+      $title = "Project ".sprintf('%04u', $_GET['id']);
+    }
+    else if($_GET['type'] == "client"){
+      $title = "Client ".sprintf('%04u', $_GET['id']);
+    }
+    else if($_GET['type'] == "contract"){
+      $title = "Project ".sprintf('%04u', $_GET['id']);
+    }
+  }
+  else {
+    $title = "View";
+  }
   echo '<title>Mark Mansour - '.$title.'</title>';
   include_once("extra/head.php");
   ?>
@@ -15,7 +28,10 @@ include_once("php/dbconnect.php");
 
 if(isset($_SESSION['UserID'])){
   $userid = $_SESSION['UserID'];
-  $week = $_SESSION['Week'];
+}
+
+if(isset($_GET['id'])){
+  $id = $_GET['id'];
 }
 ?>
 
@@ -39,9 +55,20 @@ if(isset($_SESSION['UserID'])){
       <!-- Begin Page Content -->
       <div class="container-fluid">
 
-
+        <?php
+        if($_GET['type'] == "project"){
+          include_once("extra/viewproject.php");
+        }
+        else if($_GET['type'] == "client"){
+          include_once("extra/viewclient.php");
+        }
+        else if($_GET['type'] == "contract"){
+          include_once("extra/viewcontract.php");
+        }
+        ?>
 
       </div>
+      <!-- end page content -->
 
     </div>
     <!-- End of Main Content -->
@@ -63,6 +90,7 @@ if(isset($_SESSION['UserID'])){
 <!-- End of Page Wrapper -->
 
 <?php include_once("extra/scripts.php"); ?>
+
 
 </body>
 </html>

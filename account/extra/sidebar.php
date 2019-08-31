@@ -32,16 +32,16 @@ if(!isset($_SESSION['UserID']) || $_SESSION['UserID'] != 1){
   <!-- Nav Item - Account -->
   <li class="nav-item">
     <a class="nav-link" href="index.php">
-      <i class="fas fa-fw fa-user"></i>
+      <i class="fas fa-fw fa-user text-white-50"></i>
       <span>My Account</span></a>
   </li>
 
   <!-- Nav Item - Settings -->
-  <li class="nav-item">
+  <!-- <li class="nav-item">
     <a class="nav-link" href="settings.php">
-      <i class="fas fa-fw fa-cog"></i>
+      <i class="fas fa-fw fa-cog text-white-50"></i>
       <span>Settings</span></a>
-  </li>
+  </li> -->
 
   <!-- Divider -->
   <hr class="sidebar-divider">
@@ -54,21 +54,21 @@ if(!isset($_SESSION['UserID']) || $_SESSION['UserID'] != 1){
   <!-- Nav Item - Projects -->
   <li class="nav-item">
     <a class="nav-link" href="projects.php">
-      <i class="fas fa-fw fa-tasks"></i>
+      <i class="fas fa-fw fa-tasks text-white-50"></i>
       <span>Projects</span></a>
   </li>
 
   <!-- Nav Item - Clients -->
   <li class="nav-item">
     <a class="nav-link" href="clients.php">
-      <i class="fas fa-fw fa-users"></i>
+      <i class="fas fa-fw fa-users text-white-50"></i>
       <span>Clients</span></a>
   </li>
 
   <!-- Nav Item - Dashboard -->
   <li class="nav-item">
     <a class="nav-link" href="schedule.php">
-      <i class="far fa-fw fa-calendar-alt"></i>
+      <i class="far fa-fw fa-calendar-alt text-white-50"></i>
       <span>Schedule</span></a>
   </li>
 
@@ -83,7 +83,7 @@ if(!isset($_SESSION['UserID']) || $_SESSION['UserID'] != 1){
   <!-- Nav Item - Web dev Collapse Menu -->
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-      <i class="fas fa-fw fa-folder"></i>
+      <i class="fas fa-fw fa-folder text-white-50"></i>
       <span>Web Dev</span>
     </a>
     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -102,7 +102,7 @@ if(!isset($_SESSION['UserID']) || $_SESSION['UserID'] != 1){
   <!-- Nav Item - Personal Collapse Menu -->
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="true" aria-controls="collapsePages">
-      <i class="fas fa-fw fa-folder"></i>
+      <i class="fas fa-fw fa-folder text-white-50"></i>
       <span>Personal</span>
     </a>
     <div id="collapsePersonal" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">

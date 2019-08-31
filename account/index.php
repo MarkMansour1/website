@@ -15,7 +15,6 @@ include_once("php/dbconnect.php");
 
 if(isset($_SESSION['UserID'])){
   $userid = $_SESSION['UserID'];
-  $week = $_SESSION['Week'];
 }
 ?>
 

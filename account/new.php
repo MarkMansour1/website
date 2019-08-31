@@ -2,8 +2,16 @@
 <html lang="en">
 <head>
   <?php
-  if(isset($_GET['add'])){
-    $title = "New Client";
+  if(isset($_GET['type'])){
+    if($_GET['type'] == "project"){
+      $title = "New Project";
+    }
+    else if($_GET['type'] == "client"){
+      $title = "New Client";
+    }
+    else if($_GET['type'] == "contract"){
+      $title = "New Contract";
+    }
   }
   else {
     $title = "New Project";
@@ -45,8 +53,16 @@ if(isset($_SESSION['UserID'])){
       <div class="container-fluid">
 
         <?php
-        if(isset($_GET['add'])){
-          include_once("extra/newclient.php");
+        if(isset($_GET['type'])){
+          if($_GET['type'] == "project"){
+            include_once("extra/newproject.php");
+          }
+          else if($_GET['type'] == "client"){
+            include_once("extra/newclient.php");
+          }
+          else if($_GET['type'] == "contract"){
+            include_once("extra/newcontract.php");
+          }
         }
         else {
           include_once("extra/newproject.php");

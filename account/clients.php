@@ -42,7 +42,7 @@ if(isset($_SESSION['UserID'])){
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 class="h4 mb-0 text-gray-800">Client List</h1>
-          <a href="new.php?add=client" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users fa-sm text-white-50"></i> New Client </a>
+          <a href="new.php?type=client" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users fa-sm text-white-50"></i> New Client </a>
         </div>
 
         <!-- Client Table -->
@@ -73,7 +73,7 @@ if(isset($_SESSION['UserID'])){
                   <td>'.$client['Email'].'</td>
                   <td>'.$client['Phone'].'</td>
                   <td>'.$client['Company'].'</td>
-                  <td><a href="?edit='.$id.'"><i class="fas fa-edit"></i></a></td>
+                  <td><a href="view.php?type=client&id='.$id.'"><i class="fas fa-edit"></i></a></td>
                 </tr>
                 ';
               }

@@ -42,7 +42,7 @@ if(isset($_SESSION['UserID'])){
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 class="h4 mb-0 text-gray-800">Featured Projects</h1>
-          <a href="new.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-tasks fa-sm text-white-50"></i> New Project </a>
+          <a href="new.php?type=project" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-tasks fa-sm text-white-50"></i> New Project </a>
         </div>
 
         <!-- Begin featured projects -->
@@ -63,7 +63,7 @@ if(isset($_SESSION['UserID'])){
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                       <div class="dropdown-header">Options:</div>
-                      <a class="dropdown-item" href="?edit='.$id.'">Edit Project</a>
+                      <a class="dropdown-item" href="view.php?type=project&id='.$id.'">Edit Project</a>
                     </div>
                   </div>
                 </div>
@@ -75,7 +75,7 @@ if(isset($_SESSION['UserID'])){
                     <li class="list-group-item"><strong>Company:</strong> '.$project['Company'].'</li>
                   </ul>
                   <div class="text-center mt-3">
-                    '.date('d.m.Y', strtotime($project['StartDate'])).' - '.date('d.m.Y', strtotime($project['Deadline'])).'
+                    Deadline: '.date('d-m-Y', strtotime($project['Deadline'])).'
                   </div>
                 </div>
               </div>
@@ -123,7 +123,7 @@ if(isset($_SESSION['UserID'])){
                       <td>'.$project['FirstName'].' '.$project['LastName'].'</td>
                       <td>'.$project['Company'].'</td>';
                       echo ($project['Complete'] == 1) ? '<td>Complete</td>' : '<td>Incomplete</td>';
-                      echo '<td><a href="?edit='.$id.'">edit</a></td>
+                      echo '<td><a href="view.php?type=project&id='.$id.'"><i class="fas fa-edit"></i></a></td>
                     </tr>
                     ';
                   }
