@@ -5,7 +5,7 @@ $mark =  mysqli_fetch_array($users);
 
 $sql = "SELECT * FROM contracts
 INNER JOIN projects ON contracts.ProjectID = projects.ProjectID
-INNER JOIN clients ON contracts.ClientID = clients.ClientID
+INNER JOIN clients ON projects.ClientID = clients.ClientID
 WHERE contracts.ProjectID = $id";
 
 $contracts = mysqli_query($conn, $sql);
@@ -13,13 +13,13 @@ $contract =  mysqli_fetch_array($contracts);
 ?>
 
 <!-- Begin contract -->
-<div class="container py-5 card border-dark text-gray-900">
+<div class="container py-5 card border-dark rounded-0 text-gray-900">
   <!-- Page top details -->
   <div class="row">
     <div class="col-md-6">
-      <h1 class="h5"><?php echo date('d-m-Y', strtotime($contract['Date'])) ?></h1>
-      <h1 class="h5">Client: <?php echo $contract['FirstName'].' '.$contract['LastName'] ?></h1>
-      <h1 class="h5">Company: <?php echo $contract['Company'] ?></h1>
+      <h1 class="h5"><?php echo date('d/m/Y', strtotime($contract['Date'])) ?></h1>
+      <h1 class="h5"><?php echo $contract['FirstName'].' '.$contract['LastName'] ?></h1>
+      <h1 class="h5"><?php echo $contract['Company'] ?></h1>
     </div>
     <div class="col-md-6 text-right">
       <h1 class="h5"><?php echo $mark['FirstName'].' '.$mark['LastName'] ?></h1>

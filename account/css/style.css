@@ -10439,7 +10439,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-white-50 {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .text-hide {
@@ -12200,7 +12200,7 @@ body.sidebar-toggled footer.sticky-footer {
   color: #FFFFFF;
 }
 
-.form-group input, .form-group select {
+.form-group input, .form-group select, .form-group textarea {
   outline: none;
   display: block;
   background: rgba(0, 0, 0, 0.1);
