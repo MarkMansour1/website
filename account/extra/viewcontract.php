@@ -15,16 +15,18 @@ $contract =  mysqli_fetch_array($contracts);
 <!-- Begin contract -->
 <div class="container py-5 card border-dark rounded-0 text-gray-900">
   <!-- Page top details -->
-  <div class="row">
-    <div class="col-md-6">
-      <h1 class="h5"><?php echo date('d/m/Y', strtotime($contract['Date'])) ?></h1>
-      <h1 class="h5"><?php echo $contract['FirstName'].' '.$contract['LastName'] ?></h1>
-      <h1 class="h5"><?php echo $contract['Company'] ?></h1>
-    </div>
-    <div class="col-md-6 text-right">
-      <h1 class="h5"><?php echo $mark['FirstName'].' '.$mark['LastName'] ?></h1>
-      <h1 class="h5"><?php echo $mark['Phone'] ?></h1>
-      <h1 class="h5"><?php echo $mark['Email'] ?></h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="h5"><?php echo date('d/m/Y', strtotime($contract['Date'])) ?></h1>
+        <h1 class="h5"><?php echo $contract['FirstName'].' '.$contract['LastName'] ?></h1>
+        <h1 class="h5"><?php echo $contract['Company'] ?></h1>
+      </div>
+      <div class="col-md-6 text-right">
+        <h1 class="h5"><?php echo $mark['FirstName'].' '.$mark['LastName'] ?></h1>
+        <h1 class="h5"><?php echo $mark['Phone'] ?></h1>
+        <h1 class="h5"><?php echo $mark['Email'] ?></h1>
+      </div>
     </div>
   </div>
   <!-- Title and project # -->
@@ -35,7 +37,7 @@ $contract =  mysqli_fetch_array($contracts);
   <!-- Details -->
   <div class="container pt-3 my-3">
     <h1 class="h5 pb-1"><strong>Project Title/Description:</strong> <?php echo $contract['Title'].'<br>'.$contract['Description'] ?></h1>
-    <h1 class="h5 pb-1"><strong>Deadline:</strong> <?php echo date('d-m-Y', strtotime($contract['Deadline'])) ?></h1>
+    <h1 class="h5 pb-1"><strong>Deadline:</strong> <?php echo date('d/m/Y', strtotime($contract['Deadline'])) ?></h1>
     <h1 class="h5 pb-1"><strong>Copyright Usage:</strong> <?php echo $contract['Copyright'] ?></h1>
     <h1 class="h5 pb-1"><strong>Fee:</strong> <?php echo '£'.$contract['Fee'] ?></h1>
   </div>

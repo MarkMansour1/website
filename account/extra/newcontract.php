@@ -48,7 +48,7 @@ $contract =  mysqli_fetch_array($contracts);
             <?php echo $project['Description'] ?>
           </p>
           <p>
-            <strong>Deadline: </strong><?php echo $project['Deadline'] ?><br>
+            <strong>Deadline: </strong><?php echo date('d/m/Y', strToTime($project['Deadline'])) ?><br>
           </p>
           <p>
             <strong>Copyright Usage: </strong><span id="precopy"><?php echo $contract['Copyright'] ?></span><br>
@@ -152,7 +152,7 @@ $contract =  mysqli_fetch_array($contracts);
                 <textarea id="misc" name="misc" rows="8" cols="80" ><?php echo $contract['Misc'] ?></textarea>
               </div>
               <div class="form-group">
-                <button type="button"><a onclick="previewContract()" href="#" class="nav-link text-white p-0">Preview Contract</a></button>
+                <button type="button"><a onclick="previewContract()" href="#" class="nav-link text-white p-0">Update Preview</a></button>
               </div>
             </form>
           </div>

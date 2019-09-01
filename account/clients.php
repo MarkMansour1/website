@@ -56,7 +56,7 @@ if(isset($_SESSION['UserID'])){
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Company</th>
-                <th></th>
+                <th>Edit</th>
               </tr>
             </thead>
             <tbody>
@@ -73,7 +73,7 @@ if(isset($_SESSION['UserID'])){
                   <td>'.$client['Email'].'</td>
                   <td>'.$client['Phone'].'</td>
                   <td>'.$client['Company'].'</td>
-                  <td><a href="view.php?type=client&id='.$id.'"><i class="fas fa-edit"></i></a></td>
+                  <td><a href="view.php?type=client&id='.$id.'" class="nav-link p-0"><i class="fas fa-edit"></i> Edit</a></td>
                 </tr>
                 ';
               }

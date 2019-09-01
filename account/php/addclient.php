@@ -19,10 +19,10 @@ if(mysqli_query($conn, $sql)){
     exit();
   }
   else {
-    header("location: ../newproject.php");
+    header("location: ../new.php?type=project");
     exit();
   }
-  
+
 }
 else {
   header("location: ../newproject.php?error=sqlerror");

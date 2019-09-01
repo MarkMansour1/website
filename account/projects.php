@@ -57,23 +57,13 @@ if(isset($_SESSION['UserID'])){
               <div class="card shadow mb-4 border-left-primary">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h5 class="m-0 font-weight-bold text-primary">'.$project['Title'].' - '.sprintf('%04u', $id).'</h5>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Options:</div>
-                      <a class="dropdown-item" href="view.php?type=project&id='.$id.'">Edit Project</a>
-                    </div>
-                  </div>
+                  <a href="view.php?type=project&id='.$id.'" class="nav-link p-0"><i class="fas fa-edit"></i> Edit</a>
                 </div>
                 <div class="card-body">
-                  <ul class="list-group">
-                  <li class="list-group-item"><strong>Description:</strong> '.$project['Description'].'</li>
-                  <li class="list-group-item"><strong>Notes:</strong> '.$project['Notes'].'</li>
-                    <li class="list-group-item"><strong>Client:</strong> '.$project['FirstName'].' '.$project['LastName'].'</li>
-                    <li class="list-group-item"><strong>Company:</strong> '.$project['Company'].'</li>
-                  </ul>
+                  <strong>Description:</strong> '.$project['Description'].'
+                  <strong>Notes:</strong> '.$project['Notes'].'
+                  <strong>Client:</strong> '.$project['FirstName'].' '.$project['LastName'].'
+                  <strong>Company:</strong> '.$project['Company'].'
                   <div class="text-center mt-3">
                     Deadline: '.date('d-m-Y', strtotime($project['Deadline'])).'
                   </div>
@@ -104,7 +94,7 @@ if(isset($_SESSION['UserID'])){
                     <th>Client Name</th>
                     <th>Company</th>
                     <th>Status</th>
-                    <th></th>
+                    <th>Edit</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -117,15 +107,14 @@ if(isset($_SESSION['UserID'])){
                     <tr>
                       <td>'.sprintf('%04u', $id).'</td>
                       <td>'.$project['Title'].'</td>
-                      <td>'.$project['Description'].'</td>
+                      <td style="width: 40%">'.$project['Description'].'</td>
                       <td>'.date('d-m-Y', strtotime($project['StartDate'])).'</td>
                       <td>'.date('d-m-Y', strtotime($project['Deadline'])).'</td>
                       <td>'.$project['FirstName'].' '.$project['LastName'].'</td>
                       <td>'.$project['Company'].'</td>';
                       echo ($project['Complete'] == 1) ? '<td>Complete</td>' : '<td>Incomplete</td>';
-                      echo '<td><a href="view.php?type=project&id='.$id.'"><i class="fas fa-edit"></i></a></td>
-                    </tr>
-                    ';
+                      echo '<td><a href="view.php?type=project&id='.$id.'" class="nav-link p-0"><i class="fas fa-edit"></i> Edit</a></td>
+                    </tr>';
                   }
                   ?>
                 </tbody>
