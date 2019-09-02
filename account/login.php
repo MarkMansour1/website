@@ -29,17 +29,17 @@ if(isset($_SESSION['UserID'])){
 
       <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
         <div class="container-fluid">
-          <img src="../img/logo.png" style="height: 3rem"></img>
+          <a href="../index.php"><img src="../img/logo.png" style="height: 3rem"></img></a>
         </div>
       </nav>
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
 
+        <!-- Begin login -->
         <div class="container login">
           <div class="form">
-            <div class="form-toggle"></div>
-            <div class="form-panel one">
+            <div class="form-panel">
               <div class="form-header">
                 <h1>Log In</h1>
               </div>
@@ -68,41 +68,9 @@ if(isset($_SESSION['UserID'])){
                 </form>
               </div>
             </div>
-            <div class="form-panel two">
-              <div class="form-header">
-                <h1>Sign Up</h1>
-              </div>
-              <div class="form-content">
-                <form action="php/signup.php" method="post">
-                  <input type="hidden" name="project" value="true"/>
-                  <div class="form-group">
-                    <label for="firstname">First Name</label>
-                    <input type="text" id="firstname" name="firstname"/>
-                  </div>
-                  <div class="form-group">
-                    <label for="lastname">Last Name</label>
-                    <input type="text" id="lastname" name="lastname"/>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required="required"/>
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required="required"/>
-                  </div>
-                  <div class="form-group">
-                    <label for="passwordrepeat">Repeat Password</label>
-                    <input type="password" id="passwordrepeat" name="passwordrepeat" required="required"/>
-                  </div>
-                  <div class="form-group">
-                    <button type="submit">Sign Up</button>
-                  </div>
-                </form>
-              </div>
-            </div>
           </div>
         </div>
+        <!-- End login -->
 
       </div>
       <!-- End page content -->

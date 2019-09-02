@@ -12,6 +12,10 @@
 
 <body data-spy="scroll" data-target="#navbarResponsive">
 
+<?php
+session_start();
+?>
+
 <!-- begin home -->
 <div id="home">
 
@@ -40,6 +44,23 @@
 				<li class="nav-item">
 					<a href="#contact" class="nav-link">Contact</a>
 				</li>
+				<?php
+				if(isset($_SESSION['UserID'])){
+					echo '
+					<li class="nav-item">
+						<a href="account" class="nav-link">My Account</a>
+					</li>
+					<li class="nav-item">
+						<a href="account/php/logout.php" class="nav-link">Log Out</a>
+					</li>';
+				}
+				else {
+					echo '
+					<li class="nav-item">
+						<a href="account" class="nav-link">Log In</a>
+					</li>';
+				}
+				?>
 			</ul>
 		</div>
 	</nav>
