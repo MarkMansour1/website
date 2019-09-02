@@ -23,7 +23,7 @@ if(mysqli_query($conn, $sql)){
   exit();
 }
 else {
-  header("location: ../view.php?error=sqlerror");
+  header("location: ../view.php?type=client&id=$id&error=sqlerror");
   exit();
 }
 

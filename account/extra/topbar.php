@@ -25,9 +25,7 @@
       </a>
       <!-- Dropdown - Projects -->
       <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-        <h6 class="dropdown-header">
-          Incomplete Projects
-        </h6>
+        <h6 class="dropdown-header">Active Projects</h6>
         <?php
         while($project = mysqli_fetch_array($projects)){
           echo '
@@ -51,12 +49,11 @@
 
     <!-- Nav Item - Alerts -->
     <?php
-    $tomorrow = date("Y-m-d", strtotime("+1 day"));
     $twodays = date("Y-m-d", strtotime("+2 day"));
     $nextweek = date('Y-m-d', strtotime("+7 day"));
-    $sql = "SELECT * FROM projects WHERE complete = 0 AND deadline < '$tomorrow'";
+    $sql = "SELECT * FROM projects WHERE complete = 0 AND deadline < '$twodays'";
     $dayprojects = mysqli_query($conn, $sql);
-    $sql = "SELECT * FROM projects WHERE complete = 0 AND deadline BETWEEN '$tomorrow' AND '$nextweek'";
+    $sql = "SELECT * FROM projects WHERE complete = 0 AND deadline BETWEEN '$twodays' AND '$nextweek'";
     $weekprojects = mysqli_query($conn, $sql);
     ?>
     <li class="nav-item dropdown no-arrow mx-1">
@@ -72,9 +69,7 @@
       </a>
       <!-- Dropdown - Alerts -->
       <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-        <h6 class="dropdown-header">
-          Alerts
-        </h6>
+        <h6 class="dropdown-header">Alerts</h6>
         <?php
         while($project = mysqli_fetch_array($dayprojects)){
           echo '

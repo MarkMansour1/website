@@ -64,7 +64,7 @@ if(isset($_SESSION['UserID'])){
                   <strong>Client:</strong> '.$project['FirstName'].' '.$project['LastName'].'<br>
                   <strong>Company:</strong> '.$project['Company'].'
                   <div class="text-center mt-3">
-                    Deadline: '.date('d-m-Y', strtotime($project['Deadline'])).'
+                    Deadline: '.date('d/m/Y', strtotime($project['Deadline'])).'
                   </div>
                 </div>
               </div>

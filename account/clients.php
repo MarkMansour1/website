@@ -66,7 +66,7 @@ if(isset($_SESSION['UserID'])){
                 </thead>
                 <tbody>
                   <?php
-                  $sql = "SELECT * FROM clients WHERE clientid > 1";
+                  $sql = "SELECT * FROM clients WHERE clientid > 0";
                   $clients = mysqli_query($conn, $sql);
                   while($client =  mysqli_fetch_array($clients)){
                     $id = $client['ClientID'];
