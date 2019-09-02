@@ -1,6 +1,11 @@
 <?php
-if(!isset($_SESSION['UserID']) || $_SESSION['UserID'] != 1){
-  header("location: ../index.php");
+if(!isset($_SESSION['UserID'])){
+  header("location: login.php");
+}
+else {
+  if($_SESSION['UserID'] != 1){
+    header("location: ../index.php");
+  }
 }
 ?>
 

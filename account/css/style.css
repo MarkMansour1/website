@@ -12050,60 +12050,7 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Add client/project */
+/* Forms */
 
 .overlay, .form-panel.one:before {
   position: absolute;
@@ -12251,6 +12198,23 @@ body.sidebar-toggled footer.sticky-footer {
   color: #4285F4;
 }
 
+.form-group .form-remember {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.form-group .form-remember input[type='checkbox'] {
+  display: inline-block;
+  width: auto;
+  margin: 0 10px 0 0;
+}
+.form-group .form-recovery {
+  color: #4285F4;
+  font-size: 14px;
+  text-decoration: none;
+}
+
 .form-panel {
   padding: 60px calc(5% + 60px) 60px 60px;
   box-sizing: border-box;
@@ -12361,4 +12325,8 @@ body.sidebar-toggled footer.sticky-footer {
 .cp-fab {
   background: #FFFFFF !important;
   color: #4285F4 !important;
+}
+
+.login {
+  margin-top: 5%;
 }

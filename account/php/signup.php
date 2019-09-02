@@ -10,12 +10,12 @@ $passwordRepeat = $_POST['passwordrepeat'];
 
 //If the email or password is empty, display an error message
 if(empty($email) || empty($password) || empty($passwordRepeat)){
-  header("location: ../signup.php?error=emptyfields&email=".$email);
+  header("location: ../login.php?error=emptyfields&email=".$email);
   exit();
 }
 //If the passwords don't match, display an error message
 else if($password !== $passwordRepeat){
-  header("location: ../signup.php?error=passwordmatch&email=".$email);
+  header("location: ../login.php?error=passwordmatch&email=".$email);
   exit();
 }
 else {
@@ -24,7 +24,7 @@ else {
   $result = mysqli_query($conn, $sql);
   //If there is at least one result, make the user pick a new email
   if(mysqli_num_rows($result) > 0){
-    header("location: ../signup.php?error=emailtaken");
+    header("location: ../login.php?error=emailtaken");
     exit();
   }
   else {
@@ -35,11 +35,11 @@ else {
 
     if(mysqli_query($conn, $sql)){
       //Return to the signup page and display a success messaage
-      header("location: ../signup.php?success");
+      header("location: ../login.php?success");
       exit();
     }
     else {
-      header("location: ../signup.php?error=sqlerror");
+      header("location: ../login.php?error=sqlerror");
       exit();
     }
   }

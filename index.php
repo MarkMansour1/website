@@ -11,10 +11,6 @@
 </head>
 
 <body data-spy="scroll" data-target="#navbarResponsive">
-<?php
-session_start();
-include_once("php/dbconnect.php");
-?>
 
 <!-- begin home -->
 <div id="home">
@@ -44,27 +40,6 @@ include_once("php/dbconnect.php");
 				<li class="nav-item">
 					<a href="#contact" class="nav-link">Contact</a>
 				</li>
-				<?php
-				if(isset($_SESSION['UserID'])){
-					if($_SESSION['UserID'] == 1){
-						echo '
-						<li class="nav-item">
-							<a href="account/index.php" class="nav-link">My Account</a>
-						</li>';
-					}
-					echo '
-					<li class="nav-item">
-						<a href="php/logout.php" class="nav-link">Log Out</a>
-					</li>';
-				}
-				else {
-					echo '
-					<li class="nav-item">
-						<a href="login.php" class="nav-link">Log In</a>
-					</li>
-					';
-				}
-				?>
 			</ul>
 		</div>
 	</nav>
@@ -76,26 +51,9 @@ include_once("php/dbconnect.php");
 	</div>
 
 	<div class="caption">
-		<?php
-		if(isset($_SESSION['UserID'])){
-			echo '<h1>Welcome back, '.$_SESSION['FirstName'].'</h1>
-			<h3>Good to see you again</h3>';
-
-			if($_SESSION['UserID'] == 1){
-				echo '<a href="account/index.php" class="btn btn-outline-light btn-lg">My Account</a>';
-			}
-			else {
-				echo '<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>';
-			}
-		}
-		else {
-			echo '
-			<h1>Mark Mansour</h1>
-			<h3>Web Developer</h3>
-			<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
-			';
-		}
-		?>
+		<h1>Mark Mansour</h1>
+		<h3>Web Developer</h3>
+		<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
 	</div>
 
 </div>
@@ -325,14 +283,35 @@ include_once("php/dbconnect.php");
 
 <!-- Begin footer -->
 <footer>
-	<?php include("extra/footer.php");?>
+	<div class="row justify-content-center">
+
+	  <div class="col-md-5 footertext">
+	    <a href="#home"><img src="img/logo_light.png"></a>
+	    <p>Web Developer</p>
+	  </div>
+
+	  <div class="col-md-4 text-right footertext">
+	    <br>
+	    <strong>Contact Info</strong>
+	    <p>+44 77699 73211<br>contact@markmansour.co.uk</p>
+	    <a href="https://www.twitter.com/_markmansour" target="_blank"><i class="fab fa-twitter-square"></i></a>
+	    <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+	    <a href="https://www.instagram.com/mark__mansour" target="_blank"><i class="fab fa-instagram"></i></a>
+	  </div>
+
+	  <hr class="socket">
+	  <p>&copy; Copyright Mark Mansour <?php echo date('Y') ?></p>
+
+	</div>
 </footer>
 <!-- end footer -->
 
 <!-- Back to top button -->
 <!-- <a href="#home" class="top"><i class="fas fa-2x fa-chevron-circle-up"></i></i></a> -->
 
-<?php include_once("extra/scripts.php") ?>
+<script src="js/jquery/jquery.min.js"></script>
+<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
 
 </body>
 </html>

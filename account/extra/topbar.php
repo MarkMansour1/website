@@ -139,7 +139,7 @@
           Clients
         </a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="../php/logout.php">
+        <a class="dropdown-item" href="php/logout.php">
           <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
           Logout
         </a>
