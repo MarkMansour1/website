@@ -72,9 +72,20 @@ session_start();
 	</div>
 
 	<div class="caption">
-		<h1>Mark Mansour</h1>
-		<h3>Web Developer</h3>
-		<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
+		<?php
+		if(isset($_SESSION['UserID'])){
+			echo '
+			<h1>Welcome Back Mark</h1>
+			<h3>Good to see you again</h3>
+			<a href="account" class="btn btn-outline-light btn-lg">My Account</a>';
+		}
+		else {
+			echo '
+			<h1>Mark Mansour</h1>
+			<h3>Web Developer</h3>
+			<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>';
+		}
+		?>
 	</div>
 
 </div>
