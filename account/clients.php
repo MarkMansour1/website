@@ -41,45 +41,52 @@ if(isset($_SESSION['UserID'])){
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          <h1 class="h4 mb-0 text-gray-800">Client List</h1>
-          <a href="new.php?type=client" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users fa-sm text-white-50"></i> New Client </a>
+          <h1 class="h4 mb-0 text-gray-800"></h1>
+          <a href="new.php?type=client" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users fa-sm text-white-50 mr-1"></i> New Client </a>
         </div>
 
         <!-- Client Table -->
-        <div class="table-responsive">
-          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Company</th>
-                <th>Edit</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php
-              $sql = "SELECT * FROM clients WHERE clientid > 1";
-              $clients = mysqli_query($conn, $sql);
-              while($client =  mysqli_fetch_array($clients)){
-                $id = $client['ClientID'];
-                echo '
-                <tr>
-                  <td>'.sprintf('%04u', $id).'</td>
-                  <td>'.$client['FirstName'].'</td>
-                  <td>'.$client['LastName'].'</td>
-                  <td>'.$client['Email'].'</td>
-                  <td>'.$client['Phone'].'</td>
-                  <td>'.$client['Company'].'</td>
-                  <td><a href="view.php?type=client&id='.$id.'" class="nav-link p-0"><i class="fas fa-edit"></i> Edit</a></td>
-                </tr>
-                ';
-              }
-              ?>
-            </tbody>
-          </table>
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Client List</h6>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Company</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                  $sql = "SELECT * FROM clients WHERE clientid > 1";
+                  $clients = mysqli_query($conn, $sql);
+                  while($client =  mysqli_fetch_array($clients)){
+                    $id = $client['ClientID'];
+                    echo '
+                    <tr>
+                      <td>'.sprintf('%04u', $id).'</td>
+                      <td>'.$client['FirstName'].'</td>
+                      <td>'.$client['LastName'].'</td>
+                      <td>'.$client['Email'].'</td>
+                      <td>'.$client['Phone'].'</td>
+                      <td>'.$client['Company'].'</td>
+                      <td><a href="view.php?type=client&id='.$id.'" class="nav-link p-0"><i class="fas fa-edit"></i> Edit</a></td>
+                    </tr>
+                    ';
+                  }
+                  ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
         <!-- End Client Table -->
 

@@ -42,7 +42,7 @@ if(isset($_SESSION['UserID'])){
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 class="h4 mb-0 text-gray-800">Featured Projects</h1>
-          <a href="new.php?type=project" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-tasks fa-sm text-white-50"></i> New Project </a>
+          <a href="new.php?type=project" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-file-alt fa-sm text-white-50 mr-1"></i> New Project </a>
         </div>
 
         <!-- Begin featured projects -->
@@ -60,9 +60,8 @@ if(isset($_SESSION['UserID'])){
                   <a href="view.php?type=project&id='.$id.'" class="nav-link p-0"><i class="fas fa-edit"></i> Edit</a>
                 </div>
                 <div class="card-body">
-                  <strong>Description:</strong> '.$project['Description'].'
-                  <strong>Notes:</strong> '.$project['Notes'].'
-                  <strong>Client:</strong> '.$project['FirstName'].' '.$project['LastName'].'
+                  <strong>Description:</strong> '.$project['Description'].'<br>
+                  <strong>Client:</strong> '.$project['FirstName'].' '.$project['LastName'].'<br>
                   <strong>Company:</strong> '.$project['Company'].'
                   <div class="text-center mt-3">
                     Deadline: '.date('d-m-Y', strtotime($project['Deadline'])).'

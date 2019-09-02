@@ -8,109 +8,109 @@
   <ul class="navbar-nav ml-auto">
 
     <!-- Nav Item - Alerts -->
+    <?php
+    $sql = "SELECT * FROM projects WHERE complete = 0";
+    $projects = mysqli_query($conn, $sql);
+    ?>
+    <li class="nav-item dropdown no-arrow mx-1">
+      <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-tasks fa-fw"></i>
+        <!-- Counter - Alerts -->
+        <?php
+        $num = mysqli_num_rows($projects);
+        if($num > 0){
+          echo '<span class="badge badge-danger badge-counter">'.$num.'</span>';
+        }
+        ?>
+      </a>
+      <!-- Dropdown - Projects -->
+      <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+        <h6 class="dropdown-header">
+          Incomplete Projects
+        </h6>
+        <?php
+        while($project = mysqli_fetch_array($projects)){
+          echo '
+          <a class="dropdown-item d-flex align-items-center" href="view.php?type=project&id='.$project['ProjectID'].'">
+            <div class="mr-3">
+              <div class="icon-circle bg-primary">
+                <i class="fas fa-file-alt text-white"></i>
+              </div>
+            </div>
+            <div>
+              <div class="small text-gray-500">Due '.date('d/m/Y', strToTime($project['Deadline'])).'</div>
+              <span>'.$project['Title'].'</span>
+            </div>
+          </a>
+          ';
+        }
+        ?>
+        <a class="dropdown-item text-center small text-gray-500" href="projects.php">Show All Projects</a>
+      </div>
+    </li>
+
+    <!-- Nav Item - Alerts -->
+    <?php
+    $tomorrow = date("Y-m-d", strtotime("+1 day"));
+    $twodays = date("Y-m-d", strtotime("+2 day"));
+    $nextweek = date('Y-m-d', strtotime("+7 day"));
+    $sql = "SELECT * FROM projects WHERE complete = 0 AND deadline < '$tomorrow'";
+    $dayprojects = mysqli_query($conn, $sql);
+    $sql = "SELECT * FROM projects WHERE complete = 0 AND deadline BETWEEN '$tomorrow' AND '$nextweek'";
+    $weekprojects = mysqli_query($conn, $sql);
+    ?>
     <li class="nav-item dropdown no-arrow mx-1">
       <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-bell fa-fw"></i>
         <!-- Counter - Alerts -->
-        <span class="badge badge-danger badge-counter">3+</span>
+        <?php
+        $num = mysqli_num_rows($dayprojects) + mysqli_num_rows($weekprojects);
+        if($num > 0){
+          echo '<span class="badge badge-danger badge-counter">'.$num.'</span>';
+        }
+        ?>
       </a>
       <!-- Dropdown - Alerts -->
       <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
         <h6 class="dropdown-header">
-          Alerts Center
+          Alerts
         </h6>
-        <a class="dropdown-item d-flex align-items-center" href="#">
-          <div class="mr-3">
-            <div class="icon-circle bg-primary">
-              <i class="fas fa-file-alt text-white"></i>
+        <?php
+        while($project = mysqli_fetch_array($dayprojects)){
+          echo '
+          <a class="dropdown-item d-flex align-items-center" href="view.php?type=project&id='.$project['ProjectID'].'">
+            <div class="mr-3">
+              <div class="icon-circle bg-danger">
+                <i class="fas fa-exclamation-triangle text-white"></i>
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="small text-gray-500">December 12, 2019</div>
-            <span class="font-weight-bold">A new monthly report is ready to download!</span>
-          </div>
-        </a>
-        <a class="dropdown-item d-flex align-items-center" href="#">
-          <div class="mr-3">
-            <div class="icon-circle bg-success">
-              <i class="fas fa-donate text-white"></i>
+            <div>
+              <div class="small text-gray-500">Due '.date('d/m/Y', strToTime($project['Deadline'])).'</div>
+              <span>'.$project['Title'].'</span>
             </div>
-          </div>
-          <div>
-            <div class="small text-gray-500">December 7, 2019</div>
-            $290.29 has been deposited into your account!
-          </div>
-        </a>
-        <a class="dropdown-item d-flex align-items-center" href="#">
-          <div class="mr-3">
-            <div class="icon-circle bg-warning">
-              <i class="fas fa-exclamation-triangle text-white"></i>
+          </a>
+          ';
+        }
+        while($project = mysqli_fetch_array($weekprojects)){
+          echo '
+          <a class="dropdown-item d-flex align-items-center" href="view.php?type=project&id='.$project['ProjectID'].'">
+            <div class="mr-3">
+              <div class="icon-circle bg-warning">
+                <i class="fas fa-exclamation-triangle text-white"></i>
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="small text-gray-500">December 2, 2019</div>
-            Spending Alert: We've noticed unusually high spending for your account.
-          </div>
-        </a>
-        <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+            <div>
+              <div class="small text-gray-500">Due '.date('d/m/Y', strToTime($project['Deadline'])).'</div>
+              <span>'.$project['Title'].'</span>
+            </div>
+          </a>
+          ';
+        }
+        ?>
+        <a class="dropdown-item text-center small text-gray-500" href="">No more alerts</a>
       </div>
     </li>
 
-    <!-- Nav Item - Messages -->
-    <li class="nav-item dropdown no-arrow mx-1">
-      <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-envelope fa-fw"></i>
-        <!-- Counter - Messages -->
-        <span class="badge badge-danger badge-counter">7</span>
-      </a>
-      <!-- Dropdown - Messages -->
-      <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-        <h6 class="dropdown-header">
-          Message Center
-        </h6>
-        <a class="dropdown-item d-flex align-items-center" href="#">
-          <div class="dropdown-list-image mr-3">
-            <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
-            <div class="status-indicator bg-success"></div>
-          </div>
-          <div class="font-weight-bold">
-            <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
-            <div class="small text-gray-500">Emily Fowler · 58m</div>
-          </div>
-        </a>
-        <a class="dropdown-item d-flex align-items-center" href="#">
-          <div class="dropdown-list-image mr-3">
-            <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
-            <div class="status-indicator"></div>
-          </div>
-          <div>
-            <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
-            <div class="small text-gray-500">Jae Chun · 1d</div>
-          </div>
-        </a>
-        <a class="dropdown-item d-flex align-items-center" href="#">
-          <div class="dropdown-list-image mr-3">
-            <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
-            <div class="status-indicator bg-warning"></div>
-          </div>
-          <div>
-            <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
-            <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-          </div>
-        </a>
-        <a class="dropdown-item d-flex align-items-center" href="#">
-          <div class="dropdown-list-image mr-3">
-            <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
-            <div class="status-indicator bg-success"></div>
-          </div>
-          <div>
-            <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
-            <div class="small text-gray-500">Chicken the Dog · 2w</div>
-          </div>
-        </a>
-        <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-      </div>
-    </li>
 
     <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -131,7 +131,7 @@
           Settings
         </a> -->
         <a class="dropdown-item" href="projects.php">
-          <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+          <i class="fas fa-tasks fa-sm fa-fw mr-2 text-gray-400"></i>
           Projects
         </a>
         <a class="dropdown-item" href="clients.php">
