@@ -15,11 +15,28 @@ $contracts = mysqli_query($conn, $sql);
 // }
 ?>
 
-
 <div class="form mx-0">
   <div class="form-panel">
-    <div class="form-header">
-      <h1>Edit Project</h1>
+    <div class="form-header d-flex flex-row align-items-center justify-content-between">
+      <h1>Project Details</h1>
+      <div class="dropdown no-arrow">
+        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-ellipsis-v fa-lg fa-fw text-gray-400"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+          <div class="dropdown-header">Options:</div>
+          <?php
+          if($project['Complete'] == 0){
+            echo '<a class="dropdown-item" href="php/completeproject.php?type=complete&id='.$id.'">Complete Project</a>';
+          }
+          else {
+            echo '<a class="dropdown-item" href="php/completeproject.php?type=incomplete&id='.$id.'">Incomplete Project</a>';
+          }
+          ?>
+          <div class="dropdown-divider"></div>
+          <a href="php/deleteproject.php?id=<?php echo $id ?>" class="ml-3 d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-trash-alt fa-sm text-white-50 mr-1"></i> Delete Project </a>
+        </div>
+      </div>
     </div>
     <div class="form-content">
       <form action="php/editproject.php" method="post">
@@ -67,9 +84,6 @@ $contracts = mysqli_query($conn, $sql);
         </div>
         <div class="form-group">
           <button type="submit">Save Changes</button>
-        </div>
-        <div class="text-center">
-          <a href="php/deleteproject.php?id=<?php echo $id ?>" class="mt-3 d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-trash-alt fa-sm text-white-50 mr-1"></i> Delete Project </a>
         </div>
       </form>
     </div>

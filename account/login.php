@@ -29,7 +29,7 @@ if(isset($_SESSION['UserID'])){
 
       <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
         <div class="container-fluid">
-          <a href="../index.php"><img src="../img/logo.png" style="height: 3rem"></img></a>
+          <a href="index.php"><img src="img/logo.png" style="height: 3rem"></img></a>
         </div>
       </nav>
 

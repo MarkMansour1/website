@@ -4,7 +4,7 @@ if(!isset($_SESSION['UserID'])){
 }
 else {
   if($_SESSION['UserID'] != 1){
-    header("location: ../index.php");
+    header("location: https://www.markmansour.co.uk");
   }
 }
 ?>
@@ -13,7 +13,7 @@ else {
 
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
-    <img src="../img/logo_light.png" class="img-fluid">
+    <img src="img/logo_light.png" class="img-fluid">
   </a>
 
   <!-- Divider -->
@@ -21,7 +21,7 @@ else {
 
   <!-- Nav Item - Back to site -->
   <li class="nav-item active">
-    <a class="nav-link" href="../index.php">
+    <a class="nav-link" href="https://www.markmansour.co.uk">
       <i class="far fa-arrow-alt-circle-left"></i>
       <span>Back to site</span></a>
   </li>

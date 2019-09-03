@@ -6,8 +6,17 @@ $client =  mysqli_fetch_array($clients);
 
 <div class="form">
   <div class="form-panel">
-    <div class="form-header">
-      <h1>Edit Client</h1>
+    <div class="form-header d-flex flex-row align-items-center justify-content-between">
+      <h1>Client Details</h1>
+      <div class="dropdown no-arrow">
+        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-ellipsis-v fa-lg fa-fw text-gray-400"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+          <div class="dropdown-header">Options:</div>
+          <a href="php/deleteclient.php?id=<?php echo $id ?>" class="ml-3 d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-trash-alt fa-sm text-white-50 mr-1"></i> Delete Client </a>
+        </div>
+      </div>
     </div>
     <div class="form-content">
       <form action="php/editclient.php" method="post">
