@@ -4,7 +4,7 @@ if(!isset($_SESSION['UserID'])){
 }
 else {
   if($_SESSION['UserID'] != 1){
-    header("location: https://www.markmansour.co.uk");
+    header("location: https://www.markmansour.co.uk/index.php");
   }
 }
 ?>
@@ -21,7 +21,7 @@ else {
 
   <!-- Nav Item - Back to site -->
   <li class="nav-item active">
-    <a class="nav-link" href="https://www.markmansour.co.uk">
+    <a class="nav-link" href="https://www.markmansour.co.uk/index.php">
       <i class="far fa-arrow-alt-circle-left"></i>
       <span>Back to site</span></a>
   </li>

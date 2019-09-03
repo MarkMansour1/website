@@ -44,23 +44,6 @@ session_start();
 				<li class="nav-item">
 					<a href="#contact" class="nav-link">Contact</a>
 				</li>
-				<?php
-				if(isset($_SESSION['UserID'])){
-					echo '
-					<li class="nav-item">
-						<a href="account" class="nav-link">My Account</a>
-					</li>
-					<li class="nav-item">
-						<a href="account/php/logout.php" class="nav-link">Log Out</a>
-					</li>';
-				}
-				else {
-					echo '
-					<li class="nav-item">
-						<a href="account" class="nav-link">Log In</a>
-					</li>';
-				}
-				?>
 			</ul>
 		</div>
 	</nav>
@@ -72,20 +55,9 @@ session_start();
 	</div>
 
 	<div class="caption">
-		<?php
-		if(isset($_SESSION['UserID'])){
-			echo '
-			<h1>Welcome Back Mark</h1>
-			<h3>Good to see you again</h3>
-			<a href="account" class="btn btn-outline-light btn-lg">My Account</a>';
-		}
-		else {
-			echo '
-			<h1>Mark Mansour</h1>
-			<h3>Web Developer</h3>
-			<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>';
-		}
-		?>
+		<h1>Mark Mansour</h1>
+		<h3>Web Developer</h3>
+		<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
 	</div>
 
 </div>
