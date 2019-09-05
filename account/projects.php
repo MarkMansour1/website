@@ -107,8 +107,8 @@ if(isset($_SESSION['UserID'])){
                       <td>'.sprintf('%04u', $id).'</td>
                       <td>'.$project['Title'].'</td>
                       <td style="width: 40%">'.$project['Description'].'</td>
-                      <td>'.date('d-m-Y', strtotime($project['StartDate'])).'</td>
-                      <td>'.date('d-m-Y', strtotime($project['Deadline'])).'</td>
+                      <td>'.date('d/m/Y', strtotime($project['StartDate'])).'</td>
+                      <td>'.date('d/m/Y', strtotime($project['Deadline'])).'</td>
                       <td>'.$project['FirstName'].' '.$project['LastName'].'</td>
                       <td>'.$project['Company'].'</td>';
                       echo ($project['Complete'] == 1) ? '<td>Complete</td>' : '<td>Incomplete</td>';
