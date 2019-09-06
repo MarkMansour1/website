@@ -15,10 +15,9 @@
 	session_start();
 	?>
 
-
 	<nav class="navbar navbar-dark navbar-expand-lg fixed-top">
 		<a href="#home" class="navbar-brand">
-			<img src="img/logo_light_grey.png">
+			<img src="img/logo_light.png">
 		</a>
 		<button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
@@ -49,7 +48,7 @@
 		<div class="caption">
 			<h1>Web Development</h1>
 			<h3>Web Developer</h3>
-			<a href="" class="btn btn-outline-light btn-lg">Learn More</a>
+			<a href="" class="btn btn-outline-dark btn-lg">Learn More</a>
 		</div>
 	</div>
 	<!-- end home -->
