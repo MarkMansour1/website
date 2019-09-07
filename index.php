@@ -25,7 +25,7 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a href="" class="nav-link">Home</a>
+					<a href="#home" class="nav-link">Home</a>
 				</li>
 				<li class="nav-item">
 					<a href="" class="nav-link">About</a>
@@ -46,8 +46,8 @@
 	<!-- begin home -->
 	<div id="home" class="home">
 		<div class="caption">
-			<h1>Web Development</h1>
-			<h3>Web Developer</h3>
+			<h1>Website Title</h1>
+			<h3>Title Caption</h3>
 			<a href="" class="btn btn-outline-dark btn-lg">Learn More</a>
 		</div>
 	</div>
@@ -84,7 +84,7 @@
 					</div>
 				</div>
 				<div class="form-group text-center">
-					<button class="btn btn-outline-light btn-lg" type="sumbit">Send</button>
+					<button class="btn btn-outline-dark btn-lg" type="sumbit">Send</button>
 				</div>
 			</form>
 		</div>
@@ -95,12 +95,13 @@
 	<footer>
 		<div class="container text-center text-md-left">
 			<div class="row">
-				<div class="col-6 col-md-3">
+				<img src="img/logo_light.png" class="d-md-none">
+				<div class="d-none d-md-block col-md-3">
 					<h6>Mark Mansour</h6>
 					<hr>
 					<p class="footer-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
-				<div class="col-6 col-md-3">
+				<div class="d-none d-md-block col-md-3">
 					<h6>Services</h6>
 					<hr>
 					<p><a href="#">Website Design</a></p>
@@ -108,7 +109,7 @@
 					<p><a href="#">Ecommerce</a></p>
 					<p><a href="#">Logo Design</a></p>
 				</div>
-				<div class="col-6 col-md-3">
+				<div class="d-none d-md-block col-md-3">
 					<h6>Navigation</h6>
 					<hr>
 					<p><i class="fas fa-fw fa-home mr-2"></i><a href="#home">Home</a></p>
@@ -117,7 +118,7 @@
 					<p><i class="far fa-fw fa-address-book mr-2"></i><a href="#contact">Contact</a></p>
 					<!-- <p><i class="fas fa-fw fa-sign-in-alt mr-2"></i><a href="http://account.markmansour.co.uk">Log In</a></p> -->
 				</div>
-				<div class="col-6 col-md-3">
+				<div class="col-md-3">
 					<h6>Contact</h6>
 					<hr>
 					<p><i class="fas fa-fw fa-envelope mr-2"></i><a href="mailto:contact@markmansour.co.uk">contact@markmansour.co.uk</a></p>
@@ -128,7 +129,7 @@
 			</div>
 		</div>
 		<hr class="socket">
-		<div class="container p-2 text-center">
+		<div class="container text-center">
 			<div class="row">
 				<div class="col-md-4 text-md-left">
 					<p>&copy; Copyright Mark Mansour <?php echo date('Y') ?></p>
