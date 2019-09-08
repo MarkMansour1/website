@@ -9,16 +9,14 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body data-spy="scroll" data-target="#navbarResponsive">
+<body>
 
 	<?php
 	session_start();
 	?>
 
-	<nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-		<a href="#home" class="navbar-brand">
-			<img src="img/logo_light.png">
-		</a>
+	<nav class="navbar navbar-light navbar-expand-lg fixed-top">
+		<a href="#home"><img src="img/logo.png"></a>
 		<button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -28,16 +26,19 @@
 					<a href="#home" class="nav-link">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="" class="nav-link">About</a>
+					<a href="#about" class="nav-link">About</a>
 				</li>
 				<li class="nav-item">
-					<a href="" class="nav-link">Services</a>
+					<a href="#services" class="nav-link">Services</a>
 				</li>
 				<li class="nav-item">
-					<a href="" class="nav-link">Contact</a>
+					<a href="#" class="nav-link">Portfolio</a>
 				</li>
 				<li class="nav-item">
-					<a href="http://account.markmansour.co.uk" class="btn btn-light btn-sm mt-2 mt-md-0 ml-md-1">Log In</a>
+					<a href="#contact" class="nav-link">Contact</a>
+				</li>
+				<li class="nav-item">
+					<a href="http://account.markmansour.co.uk" class="btn ml-md-1 mt-1">Log In</a>
 				</li>
 			</ul>
 		</div>
@@ -46,35 +47,48 @@
 	<!-- begin home -->
 	<div id="home" class="home">
 		<div class="caption">
-			<div class="container">
-				<h1>Website Title</h1>
-				<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-				<a href="" class="btn btn-outline-dark btn-lg">Learn More</a>
-			</div>
+			<h1>Website Title</h1>
+			<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
+			<a href="#services" class="btn-outline-light">Get Started</a>
 		</div>
 	</div>
 	<!-- end home -->
 
+	<!-- begin about -->
+	<div id="about" class="about alt">
+		<div class="head">
+			<h2>About Us</h2>
+			<hr>
+		</div>
+		<div class="container body text-center">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<a href="#contact" class="btn-outline">get in touch</a>
+		</div>
+	</div>
+	<!-- end about -->
+
 	<!-- begin services -->
 	<div id="services" class="services">
-		<div class="section-head">
+		<div class="head">
 			<h2>Services</h2>
 			<hr>
 		</div>
-		<div class="container section-body text-center">
-			<div class="row">
+		<div class="container body text-center">
+			<div class="card-columns">
 				<?php
 				for ($i=0; $i < 6; $i++) {
 					echo '
-					<div class="col-md-6 col-lg-4 my-5">
-						<h4>Heading</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-						<a href="" class="btn btn-sm">Learn More</a>
+					<div class="card">
+						<a href="#" style="display:block">
+						<h4>Web Design</h4><br>
+						<img src="img/laptop.png" class="" style="height: 8rem"><br><br>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						</a>
+						<a href="#" class="link">Learn More <i class="fas fa-arrow-right fa-sm"></i></a>
 					</div>
 					';
 				}
 				?>
-
 			</div>
 		</div>
 	</div>
