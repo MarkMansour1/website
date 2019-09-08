@@ -37,7 +37,7 @@
 					<a href="" class="nav-link">Contact</a>
 				</li>
 				<li class="nav-item">
-					<a href="http://account.markmansour.co.uk" class="loginbtn">Log In</a>
+					<a href="http://account.markmansour.co.uk" class="btn btn-light btn-sm mt-2 mt-md-0 ml-md-1">Log In</a>
 				</li>
 			</ul>
 		</div>
@@ -46,15 +46,42 @@
 	<!-- begin home -->
 	<div id="home" class="home">
 		<div class="caption">
-			<h1>Website Title</h1>
-			<h3>Title Caption</h3>
-			<a href="" class="btn btn-outline-dark btn-lg">Learn More</a>
+			<div class="container">
+				<h1>Website Title</h1>
+				<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+				<a href="" class="btn btn-outline-dark btn-lg">Learn More</a>
+			</div>
 		</div>
 	</div>
 	<!-- end home -->
 
+	<!-- begin services -->
+	<div id="services" class="services">
+		<div class="section-head">
+			<h2>Services</h2>
+			<hr>
+		</div>
+		<div class="container section-body text-center">
+			<div class="row">
+				<?php
+				for ($i=0; $i < 6; $i++) {
+					echo '
+					<div class="col-md-6 col-lg-4 my-5">
+						<h4>Heading</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+						<a href="" class="btn btn-sm">Learn More</a>
+					</div>
+					';
+				}
+				?>
+
+			</div>
+		</div>
+	</div>
+	<!-- end services -->
+
 	<!-- begin contact -->
-	<div id="contact" class="contact offset">
+	<div id="contact" class="contact">
 		<div class="container">
 			<div class="text-center">
 				<h2>Get In Touch</h2>
@@ -84,7 +111,7 @@
 					</div>
 				</div>
 				<div class="form-group text-center">
-					<button class="btn btn-outline-dark btn-lg" type="sumbit">Send</button>
+					<button class="btn" type="sumbit">Send</button>
 				</div>
 			</form>
 		</div>
@@ -102,14 +129,6 @@
 					<p class="footer-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 				<div class="d-none d-md-block col-md-3">
-					<h6>Services</h6>
-					<hr>
-					<p><a href="#">Website Design</a></p>
-					<p><a href="#">SEO & Marketing</a></p>
-					<p><a href="#">Ecommerce</a></p>
-					<p><a href="#">Logo Design</a></p>
-				</div>
-				<div class="d-none d-md-block col-md-3">
 					<h6>Navigation</h6>
 					<hr>
 					<p><i class="fas fa-fw fa-home mr-2"></i><a href="#home">Home</a></p>
@@ -117,6 +136,14 @@
 					<p><i class="fas fa-fw fa-shopping-cart mr-2"></i><a href="#services">Services</a></p>
 					<p><i class="far fa-fw fa-address-book mr-2"></i><a href="#contact">Contact</a></p>
 					<!-- <p><i class="fas fa-fw fa-sign-in-alt mr-2"></i><a href="http://account.markmansour.co.uk">Log In</a></p> -->
+				</div>
+				<div class="d-none d-md-block col-md-3">
+					<h6>Services</h6>
+					<hr>
+					<p><a href="#">Website Design</a></p>
+					<p><a href="#">SEO & Marketing</a></p>
+					<p><a href="#">Ecommerce</a></p>
+					<p><a href="#">Logo Design</a></p>
 				</div>
 				<div class="col-md-3">
 					<h6>Contact</h6>
