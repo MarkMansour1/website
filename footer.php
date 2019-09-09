@@ -1,37 +1,48 @@
 <!-- begin contact -->
+
 <div id="contact" class="contact">
-	<div class="container">
-		<div class="text-center">
-			<h2>Get In Touch</h2>
-			<hr>
+	<div class="dark">
+		<div class="container text-center">
+			<div class="head">
+				<h2>Get In Touch</h2>
+				<hr class="hr-white">
+			</div>
+			<div class="body">
+				<h4>Contact us using the form below to begin your project!</h4>
+			</div>
 		</div>
-		<form action="php/sendmail.php" method="post">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="form-group">
-						<label><i class="fas fa-fw fa-user mr-2"></i>Your Name</label>
-						<input type="text" class="form-control" name="name" required="required">
+	</div>
+	<div class="container">
+		<div class="head"></div>
+		<div class="body">
+			<form action="php/sendmail.php" method="post">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label><i class="fas fa-fw fa-user mr-2"></i>Your Name</label>
+							<input type="text" class="form-control" name="name" required="required">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label><i class="fas fa-fw fa-envelope mr-2"></i>Email</label>
+							<input type="email" class="form-control" name="email" required="required">
+						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<label><i class="fas fa-fw fa-envelope mr-2"></i>Email</label>
-						<input type="email" class="form-control" name="email" required="required">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label><i class="fas fa-fw fa-inbox mr-2"></i>Message/Details</label>
+							<textarea class="form-control" name="text" rows="4" cols="80" required="required"></textarea>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="form-group">
-						<label><i class="fas fa-fw fa-inbox mr-2"></i>Message/Details</label>
-						<textarea class="form-control" name="text" rows="4" cols="80" required="required"></textarea>
-					</div>
+				<div class="form-group text-center">
+					<button class="btn" type="sumbit">Send</button>
 				</div>
-			</div>
-			<div class="form-group text-center">
-				<button class="btn" type="sumbit">Send</button>
-			</div>
-		</form>
+			</form>
+		</div>
 	</div>
 </div>
 <!-- end contact -->
