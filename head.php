@@ -27,7 +27,7 @@
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Services <i class="fas fa-angle-down fa-sm"></i></a>
 					<div class="dropdown-menu text-center">
 						<a class="dropdown-item nav-link" href="webdesign.php">Web Design</a>
-						<a class="dropdown-item nav-link" href="#">Maintenace</a>
+						<a class="dropdown-item nav-link" href="#">Maintenance</a>
 						<a class="dropdown-item nav-link" href="#">SEO</a>
 					</div>
 				</li>

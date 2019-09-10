@@ -51,7 +51,7 @@
 <footer>
 	<div class="container text-center text-md-left">
 		<div class="row">
-			<img src="img/logo_light.png" class="d-md-none">
+			<img src="img/logo.png" class="d-md-none">
 			<div class="d-none d-md-block col-md-3">
 				<h6>Mark Mansour</h6>
 				<hr>

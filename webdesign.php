@@ -34,11 +34,11 @@
 					<a href="#">
 						<div class="plan bronze">
 							<h4 class="plan-header">Bronze</h4>
-							<h4 class="plan-price">£300</h4>
+							<h4 class="plan-price">£250</h4>
 							<ul class="plan-list">
-								<li>Customised Template Website</li>
-								<li>Google Maps</li>
+								<li>Customised Template</li>
 								<li>Contact Form</li>
+								<li>Google Maps</li>
 								<li>Mailing List</li>
 								<li>3 Rounds of Revisions</li>
 								<li>*Plus £50 per extra page</li>
